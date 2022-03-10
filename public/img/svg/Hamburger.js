@@ -1,3 +1,5 @@
+import { styles } from "@/public/js/styles";
+
 export default function () {
   return (
     <svg
@@ -9,19 +11,21 @@ export default function () {
     >
       <path
         d="M2.9375 7.5H45.3469"
-        stroke="#946345"
+        stroke={styles.primaryColor}
         strokeWidth="4"
         strokeLinecap="round"
       />
+
       <path
         d="M2.9375 21.5H45.3469"
-        stroke="#946345"
+        stroke={styles.primaryColor}
         strokeWidth="4"
         strokeLinecap="round"
       />
+
       <path
         d="M2.9375 35.5H45.3469"
-        stroke="#946345"
+        stroke={styles.primaryColor}
         strokeWidth="4"
         strokeLinecap="round"
       />

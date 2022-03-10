@@ -1,18 +1,17 @@
 export const styles = {
-  // lineargradeint: "linear-gradient(45deg,#FF4588,#F96465,#ffba97)",
-  lineargradeint: "linear-gradient(45deg,#FF4588,#F96465,#F38640)",
-  primaryColor: "#946345",
-  darkThemeColor: "lightblue",
-  lightThemeColor: "#24a4ff",
+  brandGradient: "linear-gradient(45deg,#8501EB,#0A5AF9)",
+  primaryColor: "#0A5AF9",
+  secondaryColor: "#8501EB",
   grey: "#8f8f8f",
   boxshadow:
     "-webkit-box-shadow: 0 0px 10px 0 lightgray;box-shadow: 0 0px 10px 0 lightgray;",
+  flex: "display:-webkit-box; display:-ms-flexbox; display:flex;",
   flexAligncenter:
-    "display:-webkit-box; display:-ms-flexbox; display:flex; -webkit-box-align:center; -ms-flex-align:center; align-items:center;",
+    " -webkit-box-align:center; -ms-flex-align:center; align-items:center;",
   flexJustifycenter:
-    "display:-webkit-box; display:-ms-flexbox; display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;",
+    "-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;",
   flexBothcenter:
-    "display:-webkit-box; display:-ms-flexbox; display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center; -ms-flex-align:center; align-items:center;",
+    "-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center; -ms-flex-align:center; align-items:center;",
   flexColumn:
     "-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;",
   justifyBetween:

@@ -1,3 +1,5 @@
+import "@fontsource/nunito";
+
 export default function Layout({ children }) {
   return (
     <>
@@ -11,12 +13,14 @@ export default function Layout({ children }) {
           text-decoration: unset;
           outline: none;
           -webkit-tap-highlight-color: transparent;
-          font-family: Inter;
-          font-weight: 400;
+          font-family: nunito;
+          font-weight: regular;
           -ms-scroll-chaining: none;
           overscroll-behavior: contain;
+          scroll-behavior: smooth;
           -ms-overflow-style: none;
           scrollbar-width: none;
+          color: #444;
         }
 
         *::-webkit-scrollbar {
@@ -26,14 +30,9 @@ export default function Layout({ children }) {
         body {
           font-size: 1.6rem;
           margin: 0;
-          font-family: "Roboto";
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
           transition: all 0.5s ease-out;
-        }
-
-        html {
-          scroll-behavior: smooth;
         }
       `}</style>
     </>

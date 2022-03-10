@@ -1,5 +1,5 @@
-import { styles } from "../public/js/styles";
-import X from "../public/img/X";
+import { styles } from "@/public/js/styles";
+import X from "@/public/img/svg/X";
 
 const pageLists = [
   { title: "Home", name: "" },
@@ -12,10 +12,12 @@ export default function Menu({ setMenu, menu, name, setName }) {
   return (
     <>
       <div className={menu && "black"} onClick={() => setMenu(false)}></div>
+
       <div className={`menuContainer ${menu && "showMenu"}`}>
         <div className="X" onClick={() => setMenu(false)}>
           <X />
         </div>
+
         <div className="menuContent">
           {pageLists.map((page, i) => (
             <div
@@ -32,6 +34,7 @@ export default function Menu({ setMenu, menu, name, setName }) {
           ))}
         </div>
       </div>
+
       <style jsx>{`
         .menuContainer {
           max-width: 100vw;
@@ -47,6 +50,7 @@ export default function Menu({ setMenu, menu, name, setName }) {
           right: 0;
           background: white;
         }
+
         .black {
           width: 100vw;
           height: 100vh;
@@ -57,20 +61,24 @@ export default function Menu({ setMenu, menu, name, setName }) {
           z-index: 100;
           background: black;
         }
+
         .showMenu {
           width: 20rem;
           border-left: 2px solid ${styles.primaryColor};
         }
+
         .X {
           width: 3rem;
           padding: 0rem 0.8rem;
           padding-top: 0.6rem;
           cursor: pointer;
         }
+
         .menuContent {
           font-size: 1.2rem;
           white-space: nowrap;
         }
+
         .pageName {
           padding: 0.2rem 1rem;
           cursor: pointer;
