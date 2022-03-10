@@ -2,6 +2,7 @@ export const styles = {
   brandGradient: "linear-gradient(45deg,#8501EB,#0A5AF9)",
   primaryColor: "#0A5AF9",
   secondaryColor: "#8501EB",
+  darkgray: "#444",
   grey: "#8f8f8f",
   boxshadow:
     "-webkit-box-shadow: 0 0px 10px 0 lightgray;box-shadow: 0 0px 10px 0 lightgray;",

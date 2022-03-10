@@ -1,10 +1,13 @@
 import { styles } from "@/public/js/styles";
 import X from "@/public/img/svg/X";
+import Link from "next/link";
+import {} from "react-icons/ai";
+import { CgArrowRightO } from "react-icons/cg";
 
-const pageLists = [
+export const pageLists = [
   { title: "Home", name: "" },
-  { title: "About us", name: "About" },
   { title: "Services", name: "Services" },
+  { title: "About", name: "About" },
   { title: "Contact us", name: "Contact" }
 ];
 
@@ -20,17 +23,18 @@ export default function Menu({ setMenu, menu, name, setName }) {
 
         <div className="menuContent">
           {pageLists.map((page, i) => (
-            <div
-              key={i}
-              className={
-                page.name === name ? page.name + " active" : "pageName"
-              }
-              onClick={() => {
-                setMenu(false);
-              }}
-            >
-              {page.title}
-            </div>
+            <Link href={`/${page.name}`}>
+              <div
+                key={i}
+                className={`pageName ${page.name === name && " active"}`}
+                onClick={() => {
+                  setMenu(false);
+                }}
+              >
+                <CgArrowRightO />
+                {page.title}
+              </div>
+            </Link>
           ))}
         </div>
       </div>
@@ -77,11 +81,21 @@ export default function Menu({ setMenu, menu, name, setName }) {
         .menuContent {
           font-size: 1.2rem;
           white-space: nowrap;
+          padding: 2rem;
         }
 
         .pageName {
-          padding: 0.2rem 1rem;
+          padding: 0.2rem 2rem;
           cursor: pointer;
+          font-size: 1.4rem;
+          font-weight: bold;
+          color: ${styles.secondaryColor};
+          ${styles.flex}
+          ${styles.flexAligncenter}
+          gap:1rem;
+        }
+        .active {
+          color: ${styles.darkgray};
         }
       `}</style>
     </>

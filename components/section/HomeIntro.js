@@ -1,23 +1,28 @@
+import DarkLogoSymbol from "@/public/img/svg/DarkLogoSymbol";
 import SMELogo from "@/public/img/svg/SMELogo";
 import { styles } from "@/public/js/styles";
+import Secret from "@/public/img/text/Secret";
 
-export default function Introduction() {
+export default function HomeIntro() {
   return (
     <>
       <div className="introContainer">
         <div className="introContent">
           <div className="heighlight">
-            <div>Symbol</div>
+            <div className="logoSymbol">
+              <DarkLogoSymbol />
+            </div>
             <div className="smelogo">
               <SMELogo />
             </div>
           </div>
-          <div className="textTitle">
-            <div className="title">
-              <div>Get the Secret of Powerfull Businesses</div>
-              <div>with our</div>
-              <div>Digital Services</div>
-            </div>
+          {/* <div className="title">
+            <div>Get the Secret of Powerfull Businesses</div>
+            <div>with our</div>
+            <div className="strong">Digital Services</div>
+          </div> */}
+          <div className="secret">
+            <Secret />
           </div>
         </div>
       </div>
@@ -29,7 +34,6 @@ export default function Introduction() {
           padding-top: 4rem;
           padding-bottom: 2rem;
           min-height: 100vh;
-          background: #f6f6f6;
           overflow: hidden;
           ${styles.flex};
           ${styles.flexJustifycenter}
@@ -45,32 +49,31 @@ export default function Introduction() {
           ${styles.justifyBetween};
           gap: 1rem;
         }
+        .logoSymbol {
+          max-width: 6.2rem;
+        }
+
         .smelogo {
           width: 100%;
           max-width: 10rem;
+        }
+        .secret {
+          padding: 3rem 8rem;
+        }
+        .title {
+          color: ${styles.primaryColor};
+          font-weight: bold;
+          font-size: clamp(1.8rem, 1rem + 1vw, 5rem);
+        }
+        .strong {
+          padding-top: 2rem;
+          color: ${styles.primaryColor};
+          font-size: clamp(2.4rem, 2rem + 1vw, 10rem);
         }
         @media only screen and (max-width: 600px) {
           .heighlight {
             display: none;
           }
-        }
-
-        .textTitle {
-          padding: 6rem 3rem;
-          padding-bottom: 3rem;
-        }
-
-        .title {
-          color: ${styles.primaryColor};
-          font-size: clamp(2.4rem, 1rem + 1vw, 5rem);
-        }
-
-        .titleDescription {
-          color: white;
-
-          font-size: calc(0.8rem + 1vw);
-
-          padding-top: 4vh;
         }
       `}</style>
     </>

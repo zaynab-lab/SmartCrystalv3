@@ -1,8 +1,10 @@
 import Hamburger from "@/public/img/svg/Hamburger";
 import Logo from "@/public/img/svg/FlatDarkLogo";
 import { styles } from "@/public/js/styles";
+import { pageLists } from "./Menu";
+import Link from "next/link";
 
-export default function TopBar({ setMenu }) {
+export default function TopBar({ setMenu, name }) {
   return (
     <>
       <div className="topBarContainer">
@@ -11,10 +13,21 @@ export default function TopBar({ setMenu }) {
             <Logo />
           </div>
           <div className="menuFlatBar">
-            <div>Home</div>
-            <div>Services</div>
-            <div>About</div>
-            <div>Contact us</div>
+            {pageLists.map((page, i) => (
+              <Link href={`/${page.name}`}>
+                <div
+                  key={i}
+                  className={`pageName ${
+                    page.name === name ? " active" : " dactive"
+                  }`}
+                  onClick={() => {
+                    setMenu(false);
+                  }}
+                >
+                  {page.title}
+                </div>
+              </Link>
+            ))}
           </div>
           <div className="menuBar" onClick={() => setMenu(true)}>
             <Hamburger />
@@ -28,8 +41,7 @@ export default function TopBar({ setMenu }) {
           position: fixed;
           top: 0;
           padding: 0.2rem 1rem;
-          padding-top: 0.5rem;
-          border-bottom: 2px solid ${styles.primaryColor};
+          padding-top: 1rem;
           z-index: 10;
           ${styles.flex};
           ${styles.flexJustifycenter}
@@ -45,7 +57,7 @@ export default function TopBar({ setMenu }) {
         .menuFlatBar {
           ${styles.flex};
           ${styles.flexAligncenter};
-          gap: 1rem;
+          gap: 1.2rem;
           font-weight: bold;
           font-size: 1.2rem;
         }
@@ -68,6 +80,20 @@ export default function TopBar({ setMenu }) {
         .Logo {
           width: 70%;
           max-width: 12rem;
+        }
+        .pageName {
+          font-size: 1.4rem;
+          color: ${styles.secondaryColor};
+          ${styles.flex};
+          ${styles.flexAligncenter};
+          gap: 1rem;
+        }
+
+        .active {
+          color: ${styles.darkgray};
+        }
+        .dactive {
+          cursor: pointer;
         }
       `}</style>
     </>
