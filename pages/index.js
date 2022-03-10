@@ -2,6 +2,7 @@ import { useState } from "react";
 import TopBar from "@/components/molecule/TopBar";
 import Menu from "@/components/molecule/Menu";
 import HomeIntro from "@/components/section/HomeIntro";
+import Technology from "@/components/section/Technology";
 import { styles } from "@/public/js/styles";
 
 export default function IndexPage() {
@@ -13,7 +14,7 @@ export default function IndexPage() {
         <div className="pageContent">
           <TopBar setMenu={setMenu} name="" />
           <HomeIntro />
-          <HomeIntro />
+          <Technology />
         </div>
         <div>
           <Menu setMenu={setMenu} menu={menu} name="" />

@@ -40,7 +40,7 @@ export default function TopBar({ setMenu, name }) {
           width: 100%;
           position: fixed;
           top: 0;
-          padding: 0.2rem 1rem;
+          padding: 0.2rem 2rem;
           padding-top: 1rem;
           z-index: 10;
           ${styles.flex};
@@ -52,7 +52,7 @@ export default function TopBar({ setMenu, name }) {
           ${styles.flexAligncenter};
           ${styles.justifyBetween};
           gap: 1rem;
-          max-width: 60rem;
+          max-width: 70rem;
         }
         .menuFlatBar {
           ${styles.flex};
@@ -82,7 +82,7 @@ export default function TopBar({ setMenu, name }) {
           max-width: 12rem;
         }
         .pageName {
-          font-size: 1.4rem;
+          font-size: 1.2rem;
           color: ${styles.secondaryColor};
           ${styles.flex};
           ${styles.flexAligncenter};

@@ -28,7 +28,6 @@ export default function Layout({ children }) {
         }
 
         body {
-          font-size: 1.6rem;
           margin: 0;
           -webkit-font-smoothing: antialiased;
           -moz-osx-font-smoothing: grayscale;
