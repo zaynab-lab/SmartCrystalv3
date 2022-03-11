@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { styles } from "@/public/js/styles";
 import TopBar from "@/components/molecule/TopBar";
 import Menu from "@/components/molecule/Menu";
-import HomeIntro from "@/components/section/HomeIntro";
+import Header from "@/components/section/Header";
 import Technology from "@/components/section/Technology";
-import { styles } from "@/public/js/styles";
+import Phone from "@/components/section/Phone";
+import Footer from "@/components/section/Footer";
 
 export default function IndexPage() {
   const [menu, setMenu] = useState(false);
@@ -13,8 +15,10 @@ export default function IndexPage() {
       <div className="page">
         <div className="pageContent">
           <TopBar setMenu={setMenu} name="" />
-          <HomeIntro />
+          <Header />
           <Technology />
+          <Phone />
+          <Footer />
         </div>
         <div>
           <Menu setMenu={setMenu} menu={menu} name="" />

@@ -41,7 +41,7 @@ export default function TopBar({ setMenu, name }) {
           position: fixed;
           top: 0;
           padding: 0.2rem 2rem;
-          padding-top: 1rem;
+          padding-top: 0.6rem;
           z-index: 10;
           ${styles.flex};
           ${styles.flexJustifycenter}

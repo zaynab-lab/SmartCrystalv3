@@ -122,7 +122,6 @@ export default function HomeIntro() {
         .blendContainer {
           position: absolute;
           bottom: 0;
-          left: 0;
           width: 100vw;
           height: 100vh;
           z-index: -1;
@@ -131,7 +130,6 @@ export default function HomeIntro() {
           position: absolute;
           bottom: -20rem;
           max-width: 60rem;
-          left: 0vw;
         }
         .blendM {
           position: absolute;
@@ -146,6 +144,14 @@ export default function HomeIntro() {
           .heighlight {
             display: none;
           }
+          .blend {
+            display: none;
+          }
+          .blendM {
+            display: block;
+          }
+        }
+        @media only screen and (min-width: 1800px) {
           .blend {
             display: none;
           }

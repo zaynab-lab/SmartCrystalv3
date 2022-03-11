@@ -1,7 +1,8 @@
 export const styles = {
   fullGradient:
-    "background: rgb(133,1,235); background: -moz-linear-gradient(135deg, rgba(133,1,235,1) 0%, rgba(10,90,249,1) 35%, rgba(180,113,245,1) 100%);background: -webkit-linear-gradient(135deg, rgba(133,1,235,1) 0%, rgba(10,90,249,1) 35%, rgba(180,113,245,1) 100%);background: linear-gradient(135deg, rgba(133,1,235,1) 0%, rgba(10,90,249,1) 35%, rgba(180,113,245,1) 100%);",
-  brandGradient: "linear-gradient(45deg,#8501EB,#0A5AF9)",
+    "background: rgb(133,1,235); background: -moz-linear-gradient(135deg, rgba(133,1,235,1) 0%, rgba(10,90,249,1) 35%, rgba(180,113,245,1) 100%); background: -webkit-linear-gradient(135deg, rgba(133,1,235,1) 0%, rgba(10,90,249,1) 35%, rgba(180,113,245,1) 100%); background: linear-gradient(135deg, rgba(133,1,235,1) 0%, rgba(10,90,249,1) 35%, rgba(180,113,245,1) 100%);",
+  brandGradient:
+    "background: rgb(133,1,235); background: -moz-linear-gradient(135deg, rgba(133,1,235,1) 0%, rgba(10,90,249,1) 45%); background: -webkit-linear-gradient(135deg, rgba(133,1,235,1) 0%, rgba(10,90,249,1) 45%); background: linear-gradient(135deg, rgba(133,1,235,1) 0%, rgba(10,90,249,1) 45%);",
   primaryColor: "#0A5AF9",
   secondaryColor: "#8501EB",
   darkgray: "#444",
