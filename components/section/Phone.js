@@ -1,4 +1,4 @@
-import Three from "@/components/Three";
+import Three from "@/components/molecule/Three";
 import { styles } from "@/public/js/styles";
 import useOnScreen from "@/public/js/useOnScreen";
 export default function Phone() {

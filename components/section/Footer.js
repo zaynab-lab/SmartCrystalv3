@@ -1,17 +1,49 @@
 import FlatDarkLogo from "@/public/img/svg/FlatDarkLogo";
 import UAEMap from "@/public/img/svg/UAEMap";
+import SocialMedia from "@/components/section/SocialMedia";
+import { styles } from "@/public/js/styles";
+import { FaPhone, FaUserAlt } from "react-icons/fa";
+
+const team = [
+  {
+    name: "Zohair El Khalsan",
+    role: "Founder",
+    mail: "zohair@scrystal.com",
+    phone: ""
+  },
+  {
+    name: "Abdallah Mobarak",
+    role: "Co-Founder & CEO",
+    mail: "abdallah@scrystal.com",
+    phone: ""
+  }
+];
 
 export default function Footer() {
   return (
     <>
+      <SocialMedia />
       <div className="footer">
         <div className="footerContent">
           <div className="footerLogo">
             <FlatDarkLogo />
           </div>
           <div className="footerInfo">
-            <div>Discription</div>
-            <div>
+            <div className="members">
+              {team.map((member, i) => (
+                <div key={i}>
+                  <div className="memberName">
+                    <span className="memberIcon">
+                      <FaUserAlt />
+                    </span>
+                    {member.name}
+                  </div>
+                  <div className="memberDesc">{member.role}</div>
+                  <div className="memberDesc">{member.mail}</div>
+                </div>
+              ))}
+            </div>
+            <div className="map">
               <UAEMap />
             </div>
           </div>
@@ -23,16 +55,47 @@ export default function Footer() {
       <style jsx>{`
         .footer {
           width: 100vw;
+          overflow: hidden;
         }
         .footerContent {
-          padding: 2rem;
+          padding: 1rem;
+          padding-top: 2rem;
           max-width: 70rem;
           margin: auto;
         }
         .footerLogo {
-          width: 20rem;
+          width: 18rem;
         }
         .footerInfo {
+          padding: 2rem 1rem;
+          ${styles.flex};
+          ${styles.flexAligncenter};
+          ${styles.justifyBetween};
+          flex-wrap: wrap;
+          gap: 1rem 5rem;
+          max-width: 50rem;
+          margin: auto;
+        }
+        .members {
+          ${styles.flex};
+          ${styles.flexColumn};
+          gap: 2rem;
+        }
+        .memberName {
+          font-size: 1.4rem;
+          font-weight: bold;
+          color: ${styles.primaryColor};
+          ${styles.flex};
+          gap: 1rem;
+        }
+        .memberIcon {
+          color: ${styles.primaryColor};
+        }
+        .memberDesc {
+          padding-left: 2.6rem;
+        }
+        .map {
+          max-width: 30rem;
         }
         .copyright {
           padding: 1rem;

@@ -40,7 +40,7 @@ export default function TopBar({ setMenu, name }) {
           width: 100%;
           position: fixed;
           top: 0;
-          padding: 0.2rem 2rem;
+          padding: 0.2rem 1rem;
           padding-top: 0.6rem;
           z-index: 10;
           ${styles.flex};

@@ -3,6 +3,8 @@ export const styles = {
     "background: rgb(133,1,235); background: -moz-linear-gradient(135deg, rgba(133,1,235,1) 0%, rgba(10,90,249,1) 35%, rgba(180,113,245,1) 100%); background: -webkit-linear-gradient(135deg, rgba(133,1,235,1) 0%, rgba(10,90,249,1) 35%, rgba(180,113,245,1) 100%); background: linear-gradient(135deg, rgba(133,1,235,1) 0%, rgba(10,90,249,1) 35%, rgba(180,113,245,1) 100%);",
   brandGradient:
     "background: rgb(133,1,235); background: -moz-linear-gradient(135deg, rgba(133,1,235,1) 0%, rgba(10,90,249,1) 45%); background: -webkit-linear-gradient(135deg, rgba(133,1,235,1) 0%, rgba(10,90,249,1) 45%); background: linear-gradient(135deg, rgba(133,1,235,1) 0%, rgba(10,90,249,1) 45%);",
+  borderGradient:
+    "background: rgb(133,1,235); background: -moz-linear-gradient(135deg, rgba(133,1,235,1) 0%, rgba(10,90,249,1) 25%, rgba(180,113,245,1) 85%, rgba(255,0,138,1) 100%); background: -webkit-linear-gradient(135deg, rgba(133,1,235,1) 0%, rgba(10,90,249,1) 25%, rgba(180,113,245,1) 85%, rgba(255,0,138,1) 100%); background: linear-gradient(135deg, rgba(133,1,235,1) 0%, rgba(10,90,249,1) 25%, rgba(180,113,245,1) 85%, rgba(255,0,138,1) 100%);",
   primaryColor: "#0A5AF9",
   secondaryColor: "#8501EB",
   darkgray: "#444",

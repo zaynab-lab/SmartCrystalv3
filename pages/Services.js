@@ -2,6 +2,7 @@ import { useState } from "react";
 import TopBar from "@/components/molecule/TopBar";
 import Menu from "@/components/molecule/Menu";
 import { styles } from "@/public/js/styles";
+import Header from "@/components/section/Header";
 
 export default function Services() {
   const [menu, setMenu] = useState(false);
@@ -11,8 +12,8 @@ export default function Services() {
       <div className="page">
         <div className="pageContent">
           <TopBar setMenu={setMenu} name="Services" />
+          <Header />
         </div>
-
         <div>
           <Menu setMenu={setMenu} menu={menu} name="Services" />
         </div>

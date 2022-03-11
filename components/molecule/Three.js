@@ -12,6 +12,7 @@ const statuses = [
   { name: "crystal", icon: <GiCrystalGrowth /> },
   { name: "game", icon: <MdIceSkating /> }
 ];
+
 const bar = [
   { name: "Home", icon: <BiHomeCircle /> },
   { name: "Video", icon: <MdOndemandVideo /> },
@@ -24,18 +25,26 @@ export default function Three() {
       <div className="phone">
         <div className="phoneTopBar">
           <div>LOGO</div>
+
           <div className="send">
             <BiMessageRounded />
           </div>
         </div>
+
         <div className="statusBar">
           {/* {services?.map((status, i) => (
-            <div key={i} className="statusContainer">
-              <div className="statusCircle">{status.icon}</div>
-              <div>{status.name}</div>
-            </div>
-          ))} */}
+
+<div key={i} className="statusContainer">
+
+<div className="statusCircle">{status.icon}</div>
+
+<div>{status.name}</div>
+
+</div>
+
+))} */}
         </div>
+
         <div className="appBody">
           <div className="btnContainer">
             <Link href="https://t.me/SmartCrystal">
@@ -43,125 +52,200 @@ export default function Three() {
             </Link>
           </div>
         </div>
+
         <div className="menuBar">
           {/* {bar.map((item, k) => (
-            <div key={k} className="menuItem">
-              {item.icon}
-            </div>
-          ))} */}
+
+<div key={k} className="menuItem">
+
+{item.icon}
+
+</div>
+
+))} */}
         </div>
       </div>
 
       <style jsx>{`
         .phone {
           background: white;
+
           width: min(80vw, 40rem);
+
           max-width: 20rem;
+
           height: 40rem;
+
           margin: 5vh auto;
+
           border-radius: 1rem;
+
           ${styles.flex};
+
           ${styles.flexColumn};
+
           transition: all ease 1s;
+
           transform-style: preserve-3d;
+
           position: relative;
+
           z-index: 0;
         }
+
         .phone:not(:hover) {
           transform: perspective(50rem) rotateX(30deg) rotateY(20deg)
             rotateZ(-25deg);
+
           border: 2px solid ${styles.primaryColor};
         }
+
         .phoneTopBar {
           width: 100%;
+
           color: ${styles.primaryColor};
+
           background: white;
+
           border: 2px solid ${styles.primaryColor};
+
           font-size: 1.2rem;
+
           border-radius: 1rem 1rem 0rem 0rem;
+
           ${styles.flexAligncenter}
+
           ${styles.justifyBetween};
+
           padding: 1rem 2rem;
         }
+
         .phone:not(:hover) > .phoneTopBar {
           transform: translateX(3rem) translateZ(3rem);
         }
+
         .statusBar {
           display: flex;
+
           gap: min(3vw, 0.6rem);
+
           padding: 1rem 2rem;
+
           border: 2px solid gray;
+
           overflow: auto;
         }
+
         .phone:not(:hover) > .statusBar {
           transform: translateX(2.5rem) translateZ(2.5rem);
         }
+
         .statusContainer {
           font-size: 0.9rem;
+
           ${styles.flexAligncenter};
+
           ${styles.flexColumn};
+
           border-radius: 1rem;
+
           gap: min(3vw, 0.6rem);
+
           color: ${styles.primaryColor};
+
           text-align: center;
         }
+
         .statusBar:not(:hover) > .statusContainer div {
           padding: 0rem 1rem;
         }
+
         .statusCircle {
           color: white;
+
           width: min(20vw, 4rem);
+
           height: min(20vw, 4rem);
+
           font-size: min(20vw, 4rem);
+
           background: gray;
+
           border-radius: 50%;
+
           ${styles.flexBothcenter}
+
           overflow:hidden;
+
           padding: 1rem;
         }
 
         .appBody {
           background: white;
+
           border: 2px solid gray;
+
           flex: 1 1;
         }
+
         .phone:not(:hover) > .appBody {
           transform: translateX(2rem) translateZ(2rem);
         }
+
         .btnContainer {
           height: 100%;
+
           ${styles.flexBothcenter}
         }
 
         .menuBar {
           width: 100%;
+
           height: 3rem;
+
           background: gray;
+
           border-radius: 0rem 0rem 1rem 1rem;
+
           font-size: 2rem;
+
           ${styles.flexAligncenter};
+
           ${styles.justifyBetween};
+
           border: 2px solid ${styles.primaryColor};
         }
+
         .phone:not(:hover) > .menuBar {
           transform: translateX(1rem) translateZ(1rem);
         }
 
         .menuItem {
           width: 100%;
+
           height: 100%;
+
           line-height: 0;
+
           flex: 1 1;
+
           padding: 1rem;
+
           color: white;
+
           ${styles.flexBothcenter}
         }
+
         .menuItem:not(:hover) {
           height: 100%;
+
           color: ${styles.primaryColor};
+
           background: white;
+
           border-radius: 0rem 0rem 1rem 1rem;
         }
+
         .send {
           font-size: 1.4rem;
         }
