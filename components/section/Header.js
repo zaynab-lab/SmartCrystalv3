@@ -6,7 +6,7 @@ export default function Header() {
     <>
       <div className="header">
         <div className="hexContainer">
-          <div className="hex"></div>
+          <div className="hex">h</div>
         </div>
         <Hexagon />
       </div>
