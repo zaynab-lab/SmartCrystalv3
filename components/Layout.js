@@ -21,7 +21,6 @@ export default function Layout({ children }) {
           scroll-behavior: smooth;
           -ms-overflow-style: none;
           scrollbar-width: none;
-          color: #444;
         }
 
         *::-webkit-scrollbar {

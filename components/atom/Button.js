@@ -5,7 +5,7 @@ export default function Button({ content, logo }) {
     <>
       <div className="btn">
         <div className="btnLogo">{logo}</div>
-        <div>{content}</div>
+        <div className="btnContnent">{content}</div>
       </div>
       <style jsx>{`
         .btn {
@@ -26,6 +26,9 @@ export default function Button({ content, logo }) {
           min-width: 3.2rem;
           width: 3.2rem;
           ${styles.flex};
+        }
+        .btnContnent {
+          color: #444;
         }
       `}</style>
     </>

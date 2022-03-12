@@ -12,7 +12,7 @@ export default function Phone() {
       </div>
       <style jsx>{`
         .phoneSection {
-          padding: 1rem;
+          padding: 1rem 0rem;
           overflow: hidden;
         }
 

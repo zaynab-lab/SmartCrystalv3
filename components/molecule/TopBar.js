@@ -83,7 +83,7 @@ export default function TopBar({ setMenu, pageName }) {
         }
         .pageName {
           font-size: 1.2rem;
-          color: ${styles.secondaryColor};
+          color: ${styles.primaryColor};
           ${styles.flex};
           ${styles.flexAligncenter};
           gap: 1rem;
