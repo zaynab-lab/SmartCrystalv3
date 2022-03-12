@@ -11,7 +11,7 @@ export const pageLists = [
   { title: "Contact us", name: "Contact" }
 ];
 
-export default function Menu({ setMenu, menu, name, setName }) {
+export default function Menu({ setMenu, menu, pageName }) {
   return (
     <>
       <div className={menu && "black"} onClick={() => setMenu(false)}></div>
@@ -26,7 +26,7 @@ export default function Menu({ setMenu, menu, name, setName }) {
             <Link href={`/${page.name}`}>
               <div
                 key={i}
-                className={`pageName ${page.name === name && " active"}`}
+                className={`pageName ${page.name === pageName && " active"}`}
                 onClick={() => {
                   setMenu(false);
                 }}

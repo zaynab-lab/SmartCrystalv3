@@ -33,15 +33,17 @@ export default function HomeHeader() {
                   </div>
                 }
               />
-              <Button
-                logo={<WhatsApp />}
-                content={
-                  <div>
-                    <div>Contact us</div>
-                    <div className="btnDescr">To talk business</div>
-                  </div>
-                }
-              />
+              <a href="https://wa.me/+96170097533">
+                <Button
+                  logo={<WhatsApp />}
+                  content={
+                    <div>
+                      <div>Contact us</div>
+                      <div className="btnDescr">To talk business</div>
+                    </div>
+                  }
+                />
+              </a>
               <div className="blendContainer">
                 <div className="blend">
                   <img width="100%" alt="" src="/img/png/Blend.png" />

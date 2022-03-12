@@ -14,7 +14,7 @@ const statuses = [
 ];
 
 const bar = [
-  { name: "Home", icon: <BiHomeCircle /> },
+  { name: "Services", icon: <BiHomeCircle /> },
   { name: "Video", icon: <MdOndemandVideo /> },
   { name: "Menu", icon: <CgMenu /> }
 ];

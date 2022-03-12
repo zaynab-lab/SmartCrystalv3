@@ -1,3 +1,11 @@
+import PageLayout from "@/components/PageLayout";
+
 export default function Contact() {
-  return <>contact</>;
+  return (
+    <>
+      <PageLayout pageName="Contact"></PageLayout>
+
+      <style jsx>{``}</style>
+    </>
+  );
 }

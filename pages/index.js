@@ -1,33 +1,29 @@
-import { useState } from "react";
 import { styles } from "@/public/js/styles";
-import TopBar from "@/components/molecule/TopBar";
-import Menu from "@/components/molecule/Menu";
 import HomeHeader from "@/components/section/HomeHeader";
 import Technology from "@/components/section/Technology";
 import Phone from "@/components/section/Phone";
+import Madeit from "@/components/section/Madeit";
+import Process from "@/components/section/Process";
 import Footer from "@/components/section/Footer";
+import PageLayout from "@/components/PageLayout";
 
 export default function IndexPage() {
-  const [menu, setMenu] = useState(false);
-
   return (
     <>
-      <div className="page">
+      <PageLayout pageName="">
         <div className="pageContent">
-          <TopBar setMenu={setMenu} name="" />
           <HomeHeader />
           <Technology />
           <Phone />
+          <Madeit />
+          <Process />
           <Footer />
         </div>
-        <div>
-          <Menu setMenu={setMenu} menu={menu} name="" />
-        </div>
-      </div>
+      </PageLayout>
       <style jsx>{`
         .page {
           width: 100%;
-          max-width: 100%;
+          max-width: 100vw;
           overflow-x: hidden;
           ${styles.flexAligncenter}
         }

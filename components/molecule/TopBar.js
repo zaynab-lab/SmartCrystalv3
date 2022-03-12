@@ -4,7 +4,7 @@ import { styles } from "@/public/js/styles";
 import { pageLists } from "./Menu";
 import Link from "next/link";
 
-export default function TopBar({ setMenu, name }) {
+export default function TopBar({ setMenu, pageName }) {
   return (
     <>
       <div className="topBarContainer">
@@ -18,7 +18,7 @@ export default function TopBar({ setMenu, name }) {
                 <div
                   key={i}
                   className={`pageName ${
-                    page.name === name ? " active" : " dactive"
+                    page.name === pageName ? " active" : " dactive"
                   }`}
                   onClick={() => {
                     setMenu(false);

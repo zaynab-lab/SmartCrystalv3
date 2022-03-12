@@ -3,7 +3,8 @@ import "@fontsource/nunito";
 export default function Layout({ children }) {
   return (
     <>
-      <>{children}</>
+      {children}
+
       <style jsx global>{`
         * {
           margin: 0;

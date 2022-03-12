@@ -7,9 +7,9 @@ import Tiktok from "@/public/img/social/Tiktok";
 import { styles } from "@/public/js/styles";
 
 const social = [
-  { logo: <Telegram />, link: "" },
-  { logo: <WhatsApp />, link: "" },
-  { logo: <Instagram />, link: "" },
+  { logo: <Telegram />, link: "https://telegram.me/SmartCrystal" },
+  { logo: <WhatsApp />, link: "https://wa.me/+96170097533" },
+  { logo: <Instagram />, link: "instagram://user?username=ama.gamix" },
   { logo: <Facebook />, link: "" },
   { logo: <Youtube />, link: "" },
   { logo: <Tiktok />, link: "" }
@@ -46,6 +46,7 @@ export default function SocialMedia() {
         }
         .icon {
           width: calc(1vw + 2rem);
+          cursor: pointer;
         }
       `}</style>
     </>

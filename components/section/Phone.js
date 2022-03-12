@@ -26,7 +26,7 @@ export default function Phone() {
           -webkit-text-fill-color: transparent;
         }
         .phoneContainer {
-          min-height: 40rem;
+          min-height: 42rem;
         }
       `}</style>
     </>
