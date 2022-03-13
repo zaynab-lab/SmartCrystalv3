@@ -40,6 +40,7 @@ export default function ServicesHive() {
         .services {
           ${styles.flex};
           flex-wrap: wrap;
+          ${styles.flexJustifycenter};
           gap: 0.5rem;
           flex: 1 1;
         }

@@ -17,7 +17,6 @@ export default function IndexPage() {
           <Phone />
           <Madeit />
           <Process />
-          <Footer />
         </div>
       </PageLayout>
       <style jsx>{`

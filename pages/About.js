@@ -1,13 +1,23 @@
 import PageLayout from "@/components/PageLayout";
+import AboutSection from "@/components/section/About";
 
 export default function About() {
   return (
     <>
       <PageLayout pageName="About">
-        <div>About</div>
+        <div className="about">
+          <AboutSection />
+        </div>
       </PageLayout>
 
-      <style jsx>{``}</style>
+      <style jsx>{`
+        .about {
+          max-width: 50rem;
+          margin: auto;
+          padding: 2rem;
+          padding-top: 4rem;
+        }
+      `}</style>
     </>
   );
 }
