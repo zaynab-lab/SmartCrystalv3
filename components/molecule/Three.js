@@ -2,11 +2,11 @@ import { CgMenu } from "react-icons/cg";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import { MdHomeRepairService } from "react-icons/md";
 import { styles } from "@/public/js/styles";
-import Button from "@/components/atom/Button";
 import FlatDarkLogo from "@/public/img/svg/FlatDarkLogo";
 import { useState } from "react";
 import ServicesHive from "@/components/molecule/ServicesHive";
-import Telegram from "@/public/img/social/Telegram";
+import SocialMediaBtns from "@/components/molecule/SocialMediaBtns";
+import About from "@/components/section/About";
 
 const bar = [
   { name: "Services", icon: <MdHomeRepairService /> },
@@ -32,14 +32,9 @@ export default function Three() {
 
           <div className="phoneBody">
             {page === "Services" && <ServicesHive />}
+            {page === "About" && <About />}
 
-            {page === "Social Media" && (
-              <div className="btnContainer">
-                <a href="https://t.me/SmartCrystal">
-                  <Button logo={<Telegram />} content="Telegram" />
-                </a>
-              </div>
-            )}
+            {page === "Social Media" && <SocialMediaBtns />}
           </div>
 
           <div className="menuBar">
@@ -111,6 +106,7 @@ export default function Three() {
           background: white;
           flex: 1 1;
           padding: 1rem;
+          overflow-y: auto;
         }
 
         .btnContainer {

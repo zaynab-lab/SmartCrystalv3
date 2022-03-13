@@ -1,14 +1,14 @@
 import Three from "@/components/molecule/Three";
 import { styles } from "@/public/js/styles";
-import useOnScreen from "@/public/js/useOnScreen";
-export default function Phone() {
-  const [setPhoneRef, visiblePhone] = useOnScreen({ threshold: 0.2 });
 
+export default function Phone() {
   return (
     <>
-      <div className="phoneSection" ref={setPhoneRef}>
+      <div className="phoneSection">
         <div className="phoneTxt">Technology starts with us</div>
-        <div className="phoneContainer">{visiblePhone && <Three />}</div>
+        <div className="phoneContainer">
+          <Three />
+        </div>
       </div>
       <style jsx>{`
         .phoneSection {

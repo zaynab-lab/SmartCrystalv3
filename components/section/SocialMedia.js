@@ -6,13 +6,21 @@ import Youtube from "@/public/img/social/Youtube";
 import Tiktok from "@/public/img/social/Tiktok";
 import { styles } from "@/public/js/styles";
 
-const social = [
-  { logo: <Telegram />, link: "https://telegram.me/SmartCrystal" },
-  { logo: <WhatsApp />, link: "https://wa.me/+96170097533" },
-  { logo: <Instagram />, link: "instagram://user?username=ama.gamix" },
-  { logo: <Facebook />, link: "" },
-  { logo: <Youtube />, link: "" },
-  { logo: <Tiktok />, link: "" }
+export const social = [
+  {
+    logo: <Telegram />,
+    name: "Telegram",
+    link: "https://telegram.me/SmartCrystal"
+  },
+  { logo: <WhatsApp />, name: "Whatsapp", link: "https://wa.me/+96170097533" },
+  {
+    logo: <Instagram />,
+    name: "Instagram",
+    link: "instagram://user?username=ama.gamix"
+  },
+  { logo: <Facebook />, name: "Facebook", link: "" },
+  { logo: <Youtube />, name: "Youtube", link: "" },
+  { logo: <Tiktok />, name: "Tiktok", link: "" }
 ];
 
 export default function SocialMedia() {

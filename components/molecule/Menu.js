@@ -23,9 +23,8 @@ export default function Menu({ setMenu, menu, pageName }) {
 
         <div className="menuContent">
           {pageLists.map((page, i) => (
-            <Link href={`/${page.name}`}>
+            <Link key={i} href={`/${page.name}`}>
               <div
-                key={i}
                 className={`pageName ${page.name === pageName && " active"}`}
                 onClick={() => {
                   setMenu(false);

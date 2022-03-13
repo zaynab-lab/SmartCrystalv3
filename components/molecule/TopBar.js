@@ -14,9 +14,8 @@ export default function TopBar({ setMenu, pageName }) {
           </div>
           <div className="menuFlatBar">
             {pageLists.map((page, i) => (
-              <Link href={`/${page.name}`}>
+              <Link key={i} href={`/${page.name}`}>
                 <div
-                  key={i}
                   className={`pageName ${
                     page.name === pageName ? " active" : " dactive"
                   }`}
