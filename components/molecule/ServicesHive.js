@@ -8,32 +8,47 @@ import Business from "@/public/img/svg/Business";
 import Marketing from "@/public/img/svg/Marketing";
 import Data from "@/public/img/svg/Data";
 import { styles } from "@/public/js/styles";
+import Link from "next/link";
 
 const services = [
-  { name: "Web development", icon: <Web /> },
-  { name: "System development", icon: <System /> },
-  { name: "Application development", icon: <Application /> },
-  { name: "Artificial Intelligence", icon: <Artificial /> },
-  { name: "Graphic Design", icon: <Graphic /> },
-  { name: "Digital Marketing", icon: <Marketing /> },
-  { name: "Business Management", icon: <Business /> },
-  { name: "Data Science", icon: <Data /> }
+  { name: "Web development", icon: <Web />, link: "/Web Development" },
+  { name: "System development", icon: <System />, link: "/System Development" },
+  {
+    name: "Application development",
+    icon: <Application />,
+    link: "/Application Development"
+  },
+  {
+    name: "Artificial Intelligence",
+    icon: <Artificial />,
+    link: "Artificial Intelligence"
+  },
+  { name: "Graphic Design", icon: <Graphic />, link: "Graphic Design" },
+  { name: "Digital Marketing", icon: <Marketing />, link: "Digital Marketing" },
+  {
+    name: "Business Management",
+    icon: <Business />,
+    link: "Business Management"
+  },
+  { name: "Data Science", icon: <Data />, link: "Data Science" }
 ];
 
 export default function ServicesHive() {
   return (
     <>
       <div className="services">
-        {services.map((service) => (
-          <div className="serviceContainer">
-            <div className="hexa">
-              <Hexagon />
+        {services.map((service, i) => (
+          <Link key={i} href={service.link}>
+            <div className="serviceContainer">
+              <div className="hexa">
+                <Hexagon />
+              </div>
+              <div className="serviceContent">
+                <div className="serviceIcon">{service.icon}</div>
+                <div className="serviceName">{service.name}</div>
+              </div>
             </div>
-            <div className="serviceContent">
-              <div className="serviceIcon">{service.icon}</div>
-              <div className="serviceName">{service.name}</div>
-            </div>
-          </div>
+          </Link>
         ))}
       </div>
       <style jsx>{`

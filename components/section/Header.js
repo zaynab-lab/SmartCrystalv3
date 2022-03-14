@@ -34,9 +34,8 @@ export default function Header({ title }) {
         }
         .blendContainer {
           position: absolute;
-          bottom: 0;
           z-index: -1;
-          bottom: -4rem;
+          bottom: -10vw;
         }
       `}</style>
     </>

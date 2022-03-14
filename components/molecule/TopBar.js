@@ -35,7 +35,7 @@ export default function TopBar({ setMenu, pageName }) {
       </div>
       <style jsx>{`
         .topBarContainer {
-          background: white;
+          background: #fff;
           width: 100%;
           position: fixed;
           top: 0;
