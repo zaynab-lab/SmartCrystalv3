@@ -4,7 +4,6 @@ import Technology from "@/components/section/Technology";
 import Phone from "@/components/section/Phone";
 import Madeit from "@/components/section/Madeit";
 import Process from "@/components/section/Process";
-import Footer from "@/components/section/Footer";
 import PageLayout from "@/components/PageLayout";
 
 export default function IndexPage() {
