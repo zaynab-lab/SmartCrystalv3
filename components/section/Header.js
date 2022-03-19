@@ -24,7 +24,6 @@ export default function Header({ title, titleDes }) {
           max-width: 70rem;
           margin: auto;
           ${styles.flex};
-          ${styles.flexAligncenter};
           overflow: hidden;
         }
         .titleContainer {

@@ -25,15 +25,17 @@ export default function HomeHeader() {
               <Secret />
             </div>
             <div className="btnContainer">
-              <Button
-                logo={<Telegram />}
-                content={
-                  <div>
-                    <div>Join our</div>
-                    <div>Community</div>
-                  </div>
-                }
-              />
+              <a href="https://telegram.me/SmartCrystal">
+                <Button
+                  logo={<Telegram />}
+                  content={
+                    <div>
+                      <div>Join our</div>
+                      <div>Community</div>
+                    </div>
+                  }
+                />
+              </a>
               <a href="https://wa.me/+96170097533">
                 <Button
                   logo={<WhatsApp />}

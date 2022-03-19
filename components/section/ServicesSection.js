@@ -15,7 +15,7 @@ export default function ServicesSection() {
               <>
                 <div className="servicesTitle">Services</div>
                 <div className="servicesDescription">
-                  The best digital solutions for you and your business, are
+                  The best digital solutions for you and for your business, are
                   ready to be implemented with our experts.
                 </div>
               </>

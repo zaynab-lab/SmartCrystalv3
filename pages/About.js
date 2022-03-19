@@ -7,7 +7,10 @@ export default function About() {
   return (
     <>
       <PageLayout pageName="About">
-        <Header title="About us" titleDes="" />
+        <Header
+          title="About us"
+          titleDes="About the company, mission, motto, vision statement, values."
+        />
         <Thank
           text={
             <div>

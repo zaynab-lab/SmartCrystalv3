@@ -18,6 +18,7 @@ export default function Phone() {
 
         .phoneTxt {
           font-size: 2rem;
+          padding: 1rem;
           font-weight: bold;
           ${styles.brandGradient};
           text-align: center;

@@ -7,7 +7,7 @@ export default function Contact() {
       <PageLayout pageName="Contact">
         <Header
           title="Contact Us"
-          titleDes="Don't be late to build that relationship."
+          titleDes="Don't be late to build that important relationship."
         />
       </PageLayout>
 
