@@ -14,11 +14,12 @@ export default function Services() {
               our <div> Digital Services</div>
             </div>
           }
+          titleDes="The best digital solutions for you and for your business."
         />
         <Thank
           text={
             <div>
-              <div>You made it, You entered our services page</div>
+              <div>You made it, You entered our world of services</div>
               <div>Go on to discover them</div>
             </div>
           }

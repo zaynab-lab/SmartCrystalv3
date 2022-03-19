@@ -5,6 +5,7 @@ import Secret from "@/public/img/text/Secret";
 import Button from "@/components/atom/Button";
 import WhatsApp from "@/public/img/social/WhatsApp";
 import Telegram from "@/public/img/social/Telegram";
+import Blend from "@/public/img/svg/Blend";
 
 export default function HomeHeader() {
   return (
@@ -45,12 +46,8 @@ export default function HomeHeader() {
                 />
               </a>
               <div className="blendContainer">
-                <div className="blend">
-                  <img width="100%" alt="" src="/img/png/Blend.png" />
-                </div>
-
-                <div className="blendM">
-                  <img width="100%" alt="" src="/img/png/Blend.png" />
+                <div className="bblend">
+                  <Blend />
                 </div>
               </div>
             </div>
@@ -128,37 +125,22 @@ export default function HomeHeader() {
           height: 100vh;
           z-index: -1;
         }
-        .blend {
+
+        .bblend {
           position: absolute;
-          bottom: -20rem;
-          max-width: 60rem;
-        }
-        .blendM {
-          position: absolute;
-          bottom: -6vh;
-          left: -16vw;
           width: 130vw;
-          max-width: 100vh;
-          transform: rotate(-6deg);
-          display: none;
+          bottom: -70vh;
+          right: 0;
+          opacity: 0.8;
         }
         @media only screen and (max-width: 600px) {
           .heighlight {
             display: none;
           }
-          .blend {
-            display: none;
-          }
-          .blendM {
-            display: block;
-          }
-        }
-        @media only screen and (min-width: 1800px) {
-          .blend {
-            display: none;
-          }
-          .blendM {
-            display: block;
+          .bblend {
+            width: 140vw;
+            bottom: -16vh;
+            left: -12rem;
           }
         }
       `}</style>

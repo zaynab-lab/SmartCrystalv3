@@ -5,7 +5,10 @@ export default function Contact() {
   return (
     <>
       <PageLayout pageName="Contact">
-        <Header title="Contact Us" />
+        <Header
+          title="Contact Us"
+          titleDes="Don't be late to build that relationship."
+        />
       </PageLayout>
 
       <style jsx>{``}</style>

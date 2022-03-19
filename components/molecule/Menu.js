@@ -6,7 +6,20 @@ import { CgArrowRightO } from "react-icons/cg";
 
 export const pageLists = [
   { title: "Home", name: "" },
-  { title: "Services", name: "Services" },
+  {
+    title: "Services",
+    name: "Services",
+    sublist: [
+      "Web Development",
+      "System Development",
+      "Application Development",
+      "Artificial Intelligence",
+      "Graphic Design",
+      "Digital Marketing",
+      "Business Management",
+      "Data Analysis"
+    ]
+  },
   { title: "About", name: "About" },
   { title: "Contact us", name: "Contact" }
 ];
@@ -84,14 +97,14 @@ export default function Menu({ setMenu, menu, pageName }) {
         }
 
         .pageName {
-          padding: 0.2rem 2rem;
+          padding: 0.4rem 1rem;
           cursor: pointer;
           font-size: 1.4rem;
           font-weight: bold;
-          color: ${styles.secondaryColor};
+          color: ${styles.primaryColor};
           ${styles.flex}
           ${styles.flexAligncenter}
-          gap:1rem;
+          gap: 1rem;
         }
         .active {
           color: ${styles.darkgray};

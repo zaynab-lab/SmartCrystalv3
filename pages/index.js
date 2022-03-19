@@ -4,6 +4,7 @@ import Technology from "@/components/section/Technology";
 import Phone from "@/components/section/Phone";
 import Madeit from "@/components/section/Madeit";
 import Process from "@/components/section/Process";
+import ServicesSection from "@/components/section/ServicesSection";
 import PageLayout from "@/components/PageLayout";
 
 export default function IndexPage() {
@@ -16,6 +17,7 @@ export default function IndexPage() {
           <Phone />
           <Madeit />
           <Process />
+          <ServicesSection />
         </div>
       </PageLayout>
       <style jsx>{`

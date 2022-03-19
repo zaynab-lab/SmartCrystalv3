@@ -1,10 +1,22 @@
 import PageLayout from "@/components/PageLayout";
 import AboutSection from "@/components/section/About";
+import Header from "@/components/section/Header";
+import Thank from "@/components/section/Thank";
 
 export default function About() {
   return (
     <>
       <PageLayout pageName="About">
+        <Header title="About us" titleDes="" />
+        <Thank
+          text={
+            <div>
+              <div>You are great</div>
+              <div>You want to know more about us</div>
+            </div>
+          }
+        />
+
         <div className="about">
           <AboutSection />
         </div>
@@ -15,7 +27,6 @@ export default function About() {
           max-width: 50rem;
           margin: auto;
           padding: 2rem;
-          padding-top: 4rem;
         }
       `}</style>
     </>

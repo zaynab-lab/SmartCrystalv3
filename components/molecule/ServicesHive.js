@@ -11,10 +11,10 @@ import { styles } from "@/public/js/styles";
 import Link from "next/link";
 
 const services = [
-  { name: "Web development", icon: <Web />, link: "/Web Development" },
-  { name: "System development", icon: <System />, link: "/System Development" },
+  { name: "Web Development", icon: <Web />, link: "/Web Development" },
+  { name: "System Development", icon: <System />, link: "/System Development" },
   {
-    name: "Application development",
+    name: "Application Development",
     icon: <Application />,
     link: "/Application Development"
   },
@@ -30,7 +30,7 @@ const services = [
     icon: <Business />,
     link: "Business Management"
   },
-  { name: "Data Science", icon: <Data />, link: "Data Science" }
+  { name: "Data Analysis", icon: <Data />, link: "Data Analysis" }
 ];
 
 export default function ServicesHive() {
@@ -76,9 +76,6 @@ export default function ServicesHive() {
           top: 0;
           z-index: 0;
         }
-        .hexa:hover {
-          fill: red;
-        }
         .serviceContent {
           position: absolute;
           z-index: 1;
@@ -95,6 +92,7 @@ export default function ServicesHive() {
         .serviceName {
           text-align: center;
           font-size: 0.6rem;
+          padding: 0 0.1rem;
         }
       `}</style>
     </>
