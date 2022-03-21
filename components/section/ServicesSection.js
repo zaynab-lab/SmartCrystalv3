@@ -47,7 +47,7 @@ export default function ServicesSection() {
           flex: 1 1 15rem;
           padding-bottom: 2rem;
           padding-left: calc(4vw + 0.6rem);
-          min-height: 8rem;
+          min-height: 10rem;
         }
 
         .servicesTitle {

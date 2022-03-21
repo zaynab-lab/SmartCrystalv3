@@ -1,5 +1,5 @@
 export const businessServices = [
-  "Brand system guideline",
+  "Branding System Guideline",
   "Digital Marketing Consultancy",
   "Digital Marketing Campiagn",
   "Digital Marketing Optimization",
@@ -14,3 +14,6 @@ export const businessServices = [
   "Market Research",
   "Business Plan & Business Model"
 ];
+export default function Business() {
+  return <>business</>;
+}

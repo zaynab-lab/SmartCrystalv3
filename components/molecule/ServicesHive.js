@@ -33,23 +33,25 @@ const services = [
   { name: "Data Analysis", icon: <Data />, link: "Data Analysis" }
 ];
 
-export default function ServicesHive() {
+export default function ServicesHive({ items }) {
   return (
     <>
       <div className="services">
-        {services.map((service, i) => (
-          <Link key={i} href={service.link}>
-            <div className="serviceContainer">
-              <div className="hexa">
-                <Hexagon />
+        {services
+          .filter((service) => (items ? items.includes(service.name) : " "))
+          .map((service, i) => (
+            <Link key={i} href={service.link}>
+              <div className="serviceContainer">
+                <div className="hexa">
+                  <Hexagon />
+                </div>
+                <div className="serviceContent">
+                  <div className="serviceIcon">{service.icon}</div>
+                  <div className="serviceName">{service.name}</div>
+                </div>
               </div>
-              <div className="serviceContent">
-                <div className="serviceIcon">{service.icon}</div>
-                <div className="serviceName">{service.name}</div>
-              </div>
-            </div>
-          </Link>
-        ))}
+            </Link>
+          ))}
       </div>
       <style jsx>{`
         .services {

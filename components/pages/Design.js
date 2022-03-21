@@ -14,7 +14,7 @@ export const designServices = [
 export default function Design() {
   return (
     <>
-      <div></div>
+      <div>Design</div>
     </>
   );
 }
