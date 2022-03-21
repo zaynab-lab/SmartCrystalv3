@@ -32,7 +32,6 @@ export default function ServicesSection() {
       <style jsx>{`
         .servicesSection {
           position: relative;
-
           background: #f4f9ff;
           overflow: hidden;
         }
