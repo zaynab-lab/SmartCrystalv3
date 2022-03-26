@@ -1,3 +1,10 @@
+import BuildingStage from "@/public/img/text/BuildingStage";
+
 export default function SysDev() {
-  return <>System Development</>;
+  return (
+    <>
+      System Development
+      <BuildingStage />
+    </>
+  );
 }

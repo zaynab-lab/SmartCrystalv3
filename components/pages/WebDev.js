@@ -1,3 +1,9 @@
+import BuildingStage from "@/public/img/text/BuildingStage";
+
 export default function WebDev() {
-  return <>1 2 3</>;
+  return (
+    <>
+      <BuildingStage />
+    </>
+  );
 }

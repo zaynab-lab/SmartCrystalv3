@@ -1,3 +1,10 @@
+import BuildingStage from "@/public/img/text/BuildingStage";
+
 export default function AppDev() {
-  return <>Application Management</>;
+  return (
+    <>
+      Application
+      <BuildingStage />
+    </>
+  );
 }

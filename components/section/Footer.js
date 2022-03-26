@@ -96,6 +96,7 @@ export default function Footer() {
         }
         .map {
           max-width: 30rem;
+          margin: auto;
         }
         .copyright {
           padding: 1rem;
