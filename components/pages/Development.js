@@ -1,5 +1,8 @@
 import ServicesHive from "../molecule/ServicesHive";
 import ServiceDescription from "../section/ServiceDescription";
+import PhoneLayout from "@/components/molecule/PhoneLayout";
+import Reactjs from "@/public/img/apps/Reactjs";
+import Nextjs from "@/public/img/apps/Nextjs";
 
 const developmentservices = [
   "Company Profile",
@@ -20,10 +23,16 @@ const developmentservices = [
   "Process Automation"
 ];
 
+const apps = [<Reactjs />, <Nextjs />];
+
 export default function Development() {
   return (
     <>
-      <ServiceDescription text={text} img={"devImg"} title={"Development"} />
+      <ServiceDescription
+        text={text}
+        img={"devImg"}
+        title={"Development & Technology"}
+      />
       <ServicesHive
         items={[
           "Web Development",
@@ -31,6 +40,13 @@ export default function Development() {
           "Application Development",
           "Artificial Intelligence"
         ]}
+      />
+
+      <PhoneLayout
+        sectionTitle="Used Technology"
+        items={apps.map((app, i) => (
+          <div key={i}>{app}</div>
+        ))}
       />
     </>
   );

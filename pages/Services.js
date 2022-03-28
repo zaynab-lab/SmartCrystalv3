@@ -34,7 +34,7 @@ export default function Services() {
         <div className="servicesSection">
           <div className="servicesContent">
             <div className="section">
-              <div className="servicesTitle">Development</div>
+              <div className="servicesTitle">Development & Technology</div>
               <div className="developmentSection">
                 <Development />
               </div>

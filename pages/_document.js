@@ -1,8 +1,8 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
 
-const APP_NAME = "Smart Crystal";
+const APP_NAME = "SMART CRYSTAL";
 
-const APP_DESCRIPTION = "We hold your hands for the world of technology";
+const APP_DESCRIPTION = "Digital & IT Services";
 
 export default class extends Document {
   static async getInitialProps(ctx) {
@@ -50,6 +50,7 @@ export default class extends Document {
               text-align: center;
             }
           `}</style>
+          <title>SMART CRYSTAL</title>
         </Head>
         <body>
           <Main />

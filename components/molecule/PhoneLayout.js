@@ -1,58 +1,42 @@
-import { CgMenu } from "react-icons/cg";
-import { IoMdInformationCircleOutline } from "react-icons/io";
-import { MdHomeRepairService } from "react-icons/md";
 import { styles } from "@/public/js/styles";
 import FlatDarkLogo from "@/public/img/svg/FlatDarkLogo";
-import { useState } from "react";
-import ServicesHive from "@/components/molecule/ServicesHive";
-import SocialMediaBtns from "@/components/molecule/SocialMediaBtns";
-import About from "@/components/section/About";
 
-const bar = [
-  { name: "Services", icon: <MdHomeRepairService /> },
-  { name: "About", icon: <IoMdInformationCircleOutline /> },
-  { name: "Social Media", icon: <CgMenu /> }
-];
-
-export default function Three() {
-  const [page, setPage] = useState("Services");
-
+export default function PhoneLayout({ sectionTitle, items }) {
   return (
     <>
       <div className="phonesection">
+        <div className="sectionTitle">{sectionTitle}</div>
         <div className="phone">
           <div className="cameraContainer"></div>
+
           <div className="phoneTopBar">
             <div>
               <FlatDarkLogo />
             </div>
           </div>
 
-          <div className="statusBar">{page}</div>
+          <div className="statusBar">{items}</div>
 
-          <div className="phoneBody">
-            {page === "Services" && <ServicesHive />}
-            {page === "About" && <About />}
-            {page === "Social Media" && <SocialMediaBtns />}
-          </div>
-
-          <div className="menuBar">
-            {bar.map((item, k) => (
-              <div
-                key={k}
-                className={`menuItem ${item.name === page && "activePage"}`}
-                onClick={() => setPage(item.name)}
-              >
-                {item.icon}
-              </div>
-            ))}
-          </div>
+          <div className="phoneBody"></div>
         </div>
       </div>
+
       <style jsx>{`
         .phonesection {
           width: 100vw;
+          max-width: 70rem;
           overflow: hidden;
+          position: relative;
+          padding-top: 2rem;
+        }
+        .sectionTitle {
+          padding-left: 2rem;
+          font-size: calc(1.8rem + 0.5vw);
+          font-weight: bold;
+          ${styles.brandGradient};
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
 
         .phone {
@@ -69,6 +53,7 @@ export default function Three() {
           z-index: 0;
           border: 8px solid ${styles.primaryColor};
         }
+
         .cameraContainer {
           width: 10rem;
           height: 1.2rem;
@@ -93,12 +78,13 @@ export default function Three() {
           font-size: 1.2rem;
           font-weight: bold;
           color: ${styles.primaryColor};
-          gap: min(3vw, 0.6rem);
+          gap: 2rem;
           border: solid ${styles.primaryColor};
           border-width: 2px 0 2px 0;
           background: white;
           padding: 0.6rem 1rem;
           overflow: auto;
+          height: 6rem;
         }
 
         .phoneBody {
@@ -106,37 +92,12 @@ export default function Three() {
           flex: 1 1;
           padding: 1rem;
           overflow-y: auto;
+          border-radius: 0rem 0rem 2.5rem 2.5rem;
         }
 
         .btnContainer {
           height: 100%;
           ${styles.flexBothcenter}
-        }
-
-        .menuBar {
-          width: 100%;
-          height: 3.6rem;
-          background: white;
-          border-radius: 0rem 0rem 2.5rem 2.5rem;
-          font-size: 2rem;
-          ${styles.flex};
-          ${styles.flexAligncenter};
-          ${styles.justifyBetween};
-          border-top: 2px solid ${styles.primaryColor};
-        }
-
-        .menuItem {
-          width: 100%;
-          height: 100%;
-          line-height: 0;
-          padding: 1rem;
-          color: #444;
-          ${styles.flex};
-          ${styles.flexBothcenter};
-          cursor: pointer;
-        }
-        .activePage {
-          color: ${styles.primaryColor};
         }
 
         @media only screen and (min-width: 600px) {
@@ -159,6 +120,7 @@ export default function Three() {
             transform: translateX(1.5rem) translateZ(1.5rem);
             border: 2px solid ${styles.primaryColor};
           }
+
           .phone:not(:hover) > .phoneBody > .btnContainer {
             transform: translateX(5rem) translateZ(5rem) translateY(2rem);
           }

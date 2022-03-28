@@ -28,7 +28,6 @@ export default function ServiceRouter({ service }) {
       </div>
       <style jsx>{`
         .servicesRouter {
-          padding: 2rem;
           max-width: 70rem;
           margin: auto;
         }

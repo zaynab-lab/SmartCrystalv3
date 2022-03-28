@@ -15,11 +15,11 @@ export default function ServiceDescription({ text, title, img }) {
       </div>
       <style jsx>{`
         .serviceDescriptionContainer {
-          padding-bottom: 2rem;
+          padding: 2rem;
         }
 
         .dtitle {
-          font-size: calc(2rem + 0.5vw);
+          font-size: calc(1.8rem + 0.5vw);
           padding: 1rem;
           padding-left: 0;
           font-weight: bold;
