@@ -126,6 +126,7 @@ export default function Process() {
               fill="#0A5AF9"
             />
             <line
+              id="steps"
               x1="174"
               y1="912"
               x2="1340"
@@ -141,6 +142,7 @@ export default function Process() {
 
             <path
               d="M215 830.5V714H476V566.5H734.5V410H1024.5V268H1331"
+              id="steps"
               stroke="url(#paint0_linear_374_72)"
               strokeWidth="10"
               strokeLinecap="round"
@@ -621,6 +623,32 @@ export default function Process() {
         }
         .btnDescr {
           font-size: 0.8rem;
+        }
+
+        @-webkit-keyframes steps {
+          0% {
+            stroke-dashoffset: 3000;
+          }
+
+          100% {
+            stroke-dashoffset: 0;
+          }
+        }
+
+        @keyframes steps {
+          0% {
+            stroke-dashoffset: 3000;
+          }
+
+          100% {
+            stroke-dashoffset: 0;
+          }
+        }
+
+        #steps {
+          stroke-dasharray: 3000;
+          stroke-dashoffset: 0;
+          animation: steps 6s ease-in-out forwards infinite;
         }
       `}</style>
     </>

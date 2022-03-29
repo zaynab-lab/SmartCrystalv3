@@ -15,7 +15,7 @@ const team = [
     name: "Abdallah Mobarak",
     role: "Co-Founder & CEO",
     mail: "abdallah@scrystal.com",
-    phone: ""
+    phone: "+961 7009 75 33"
   }
 ];
 
@@ -40,6 +40,9 @@ export default function Footer() {
                   </div>
                   <div className="memberDesc">{member.role}</div>
                   <div className="memberDesc">{member.mail}</div>
+                  <div className="memberDesc">
+                    {member.phone && `ph : ${member.phone}`}
+                  </div>
                 </div>
               ))}
             </div>

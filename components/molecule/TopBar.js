@@ -82,14 +82,14 @@ export default function TopBar({ setMenu, pageName }) {
         }
         .pageName {
           font-size: 1.2rem;
-          color: ${styles.primaryColor};
+          color: ${styles.darkgray};
           ${styles.flex};
           ${styles.flexAligncenter};
           gap: 1rem;
         }
 
         .active {
-          color: ${styles.darkgray};
+          color: ${styles.primaryColor};
         }
         .dactive {
           cursor: pointer;
