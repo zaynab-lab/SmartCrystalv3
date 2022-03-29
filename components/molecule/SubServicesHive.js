@@ -22,7 +22,7 @@ export default function SubServicesHive({ subService }) {
           ${styles.flex};
           flex-wrap: wrap;
           ${styles.flexJustifycenter};
-          gap: 0.5rem;
+          gap: 0.8rem;
           flex: 1 1;
         }
 

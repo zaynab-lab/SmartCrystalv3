@@ -38,7 +38,7 @@ export default function ServicesHive({ items }) {
     <>
       <div className="services">
         {services
-          .filter((service) => (items ? items.includes(service.name) : " "))
+          .filter((service) => (items ? items?.includes(service.name) : " "))
           .map((service, i) => (
             <Link key={i} href={service.link}>
               <div className="serviceContainer">

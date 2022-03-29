@@ -3,6 +3,13 @@ import ServiceDescription from "../section/ServiceDescription";
 import PhoneLayout from "@/components/molecule/PhoneLayout";
 import Reactjs from "@/public/img/apps/Reactjs";
 import Nextjs from "@/public/img/apps/Nextjs";
+import Flutter from "@/public/img/apps/Flutter";
+import Vue from "@/public/img/apps/Vue";
+import Angular from "@/public/img/apps/Angular";
+import GraphQl from "@/public/img/apps/GraphQl";
+import Neo4j from "@/public/img/apps/Neo4j";
+import Nodejs from "@/public/img/apps/Nodejs";
+import MongoDB from "@/public/img/apps/MongoDB";
 
 const developmentservices = [
   "Company Profile",
@@ -23,7 +30,17 @@ const developmentservices = [
   "Process Automation"
 ];
 
-const apps = [<Reactjs />, <Nextjs />];
+const apps = [
+  <Reactjs />,
+  <Nextjs />,
+  <Flutter />,
+  <Vue />,
+  <Angular />,
+  <MongoDB />,
+  <Nodejs />,
+  <GraphQl />,
+  <Neo4j />
+];
 
 export default function Development() {
   return (
@@ -41,12 +58,10 @@ export default function Development() {
           "Artificial Intelligence"
         ]}
       />
-
       <PhoneLayout
         sectionTitle="Used Technology"
-        items={apps.map((app, i) => (
-          <div key={i}>{app}</div>
-        ))}
+        statusbarItems={apps}
+        phoneItems={developmentservices}
       />
     </>
   );

@@ -1,5 +1,13 @@
-import BuildingStage from "@/public/img/text/BuildingStage";
 import ServiceDescription from "@/components/section/ServiceDescription";
+import PhoneLayout from "../molecule/PhoneLayout";
+import Figma from "@/public/img/svg/designApps/Figma";
+import Photoshop from "@/public/img/svg/designApps/Photoshop";
+import Maya from "@/public/img/svg/designApps/Maya";
+import AdobeIllistrator from "@/public/img/svg/designApps/AdobeIllistrator";
+import Blender from "@/public/img/svg/Blender";
+import InDesign from "@/public/img/svg/designApps/InDesign";
+import Premier from "@/public/img/svg/designApps/Premier";
+import AfterEffects from "@/public/img/svg/designApps/AfterEffects";
 
 export const designServices = [
   "Logo Design",
@@ -16,6 +24,17 @@ export const designServices = [
   "Video Editing"
 ];
 
+const apps = [
+  <Figma />,
+  <Photoshop />,
+  <AdobeIllistrator />,
+  <Maya />,
+  <Blender />,
+  <InDesign />,
+  <Premier />,
+  <AfterEffects />
+];
+
 export default function Design() {
   return (
     <>
@@ -24,9 +43,11 @@ export default function Design() {
         img={"designImg"}
         title={"Design & Montage"}
       />
-
-      <BuildingStage />
-      <style jsx>{``}</style>
+      <PhoneLayout
+        sectionTitle="Used Technology"
+        statusbarItems={apps}
+        phoneItems={designServices}
+      />
     </>
   );
 }

@@ -1,23 +1,34 @@
 import { styles } from "@/public/js/styles";
 import FlatDarkLogo from "@/public/img/svg/FlatDarkLogo";
+import SubServicesHive from "./SubServicesHive";
 
-export default function PhoneLayout({ sectionTitle, items }) {
+export default function PhoneLayout({
+  sectionTitle,
+  statusbarItems,
+  phoneItems
+}) {
   return (
     <>
       <div className="phonesection">
         <div className="sectionTitle">{sectionTitle}</div>
         <div className="phone">
           <div className="cameraContainer"></div>
-
           <div className="phoneTopBar">
             <div>
               <FlatDarkLogo />
             </div>
           </div>
-
-          <div className="statusBar">{items}</div>
-
-          <div className="phoneBody"></div>
+          <div className="statusBar">
+            {statusbarItems.map((item, i) => (
+              <div key={i} className="item">
+                {item}
+              </div>
+            ))}
+          </div>
+          <div className="phoneBody">
+            <div className="subTitle">Sub Services</div>
+            {<SubServicesHive subService={phoneItems} />}
+          </div>
         </div>
       </div>
 
@@ -30,8 +41,8 @@ export default function PhoneLayout({ sectionTitle, items }) {
           padding-top: 2rem;
         }
         .sectionTitle {
-          padding-left: 2rem;
-          font-size: calc(1.8rem + 0.5vw);
+          padding-left: 1.8rem;
+          font-size: calc(1.6rem + 0.5vw);
           font-weight: bold;
           ${styles.brandGradient};
           background-clip: text;
@@ -52,6 +63,7 @@ export default function PhoneLayout({ sectionTitle, items }) {
           position: relative;
           z-index: 0;
           border: 8px solid ${styles.primaryColor};
+          overflow: hidden;
         }
 
         .cameraContainer {
@@ -74,17 +86,18 @@ export default function PhoneLayout({ sectionTitle, items }) {
         }
 
         .statusBar {
-          display: flex;
-          font-size: 1.2rem;
-          font-weight: bold;
+          ${styles.flex};
           color: ${styles.primaryColor};
-          gap: 2rem;
+          gap: 1.6rem;
           border: solid ${styles.primaryColor};
           border-width: 2px 0 2px 0;
           background: white;
           padding: 0.6rem 1rem;
           overflow: auto;
           height: 6rem;
+        }
+        .item {
+          min-width: 5rem;
         }
 
         .phoneBody {
@@ -98,6 +111,15 @@ export default function PhoneLayout({ sectionTitle, items }) {
         .btnContainer {
           height: 100%;
           ${styles.flexBothcenter}
+        }
+        .subTitle {
+          padding-bottom: 0.6rem;
+          font-size: 1.2rem;
+          font-weight: bold;
+          ${styles.brandGradient};
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
 
         @media only screen and (min-width: 600px) {

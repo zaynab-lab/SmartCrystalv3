@@ -22,7 +22,7 @@ export default function () {
       <path
         d="M67.6641 156.079L90.3206 148.564L92.5712 131.182L67.6641 156.079Z"
         fill="url(#paint0_linear_525_80)"
-        fill-opacity="0.8"
+        fillOpacity="0.8"
       />
       <defs>
         <linearGradient
@@ -34,7 +34,7 @@ export default function () {
           gradientUnits="userSpaceOnUse"
         >
           <stop />
-          <stop offset="1" stop-opacity="0" />
+          <stop offset="1" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

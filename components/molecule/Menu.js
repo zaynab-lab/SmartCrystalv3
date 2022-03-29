@@ -1,7 +1,6 @@
 import { styles } from "@/public/js/styles";
 import X from "@/public/img/svg/X";
 import Link from "next/link";
-import {} from "react-icons/ai";
 import { CgArrowRightO } from "react-icons/cg";
 
 export const pageLists = [
@@ -9,16 +8,7 @@ export const pageLists = [
   {
     title: "Services",
     name: "Services",
-    sublist: [
-      "Web Development",
-      "System Development",
-      "Application Development",
-      "Artificial Intelligence",
-      "Graphic Design",
-      "Digital Marketing",
-      "Business Management",
-      "Data Analysis"
-    ]
+    sublist: ["Development", "Design", "Business"]
   },
   { title: "About", name: "About" },
   { title: "Contact us", name: "Contact" }
@@ -35,19 +25,50 @@ export default function Menu({ setMenu, menu, pageName }) {
         </div>
 
         <div className="menuContent">
-          {pageLists.map((page, i) => (
-            <Link key={i} href={`/${page.name}`}>
-              <div
-                className={`pageName ${page.name === pageName && " active"}`}
-                onClick={() => {
-                  setMenu(false);
-                }}
-              >
-                <CgArrowRightO />
-                {page.title}
+          {pageLists.map((page, i) =>
+            page.sublist ? (
+              <div key={i}>
+                <Link href={`/${page.name}`}>
+                  <div
+                    className={`pageName ${
+                      page.name === pageName && " active"
+                    }`}
+                    onClick={() => {
+                      setMenu(false);
+                    }}
+                  >
+                    <CgArrowRightO />
+                    {page.title}
+                  </div>
+                </Link>
+                <div>
+                  {page.sublist.map((item, k) => (
+                    <Link key={k} href={`/${item}`}>
+                      <div
+                        className={`subpageName ${
+                          item === pageName && " active"
+                        }`}
+                      >
+                        {item}
+                      </div>
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </Link>
-          ))}
+            ) : (
+              <Link key={i} href={`/${page.name}`}>
+                <div
+                  className={`pageName ${page.name === pageName && " active"}`}
+                  onClick={() => {
+                    setMenu(false);
+                  }}
+                >
+                  <CgArrowRightO />
+                  {page.title}
+                </div>
+              </Link>
+            )
+          )}
         </div>
       </div>
 
@@ -101,13 +122,21 @@ export default function Menu({ setMenu, menu, pageName }) {
           cursor: pointer;
           font-size: 1.4rem;
           font-weight: bold;
-          color: ${styles.primaryColor};
-          ${styles.flex}
-          ${styles.flexAligncenter}
+          color: ${styles.darkgray};
+          ${styles.flex};
+          ${styles.flexAligncenter};
           gap: 1rem;
         }
-        .active {
+        .subpageName {
+          padding-bottom: 0.4rem;
+          padding-left: 3.4rem;
+          cursor: pointer;
+          font-size: 1.2rem;
           color: ${styles.darkgray};
+        }
+
+        .active {
+          color: ${styles.primaryColor};
         }
       `}</style>
     </>
