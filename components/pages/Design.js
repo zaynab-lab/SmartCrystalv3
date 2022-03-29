@@ -43,11 +43,7 @@ export default function Design() {
         img={"designImg"}
         title={"Design & Montage"}
       />
-      <PhoneLayout
-        sectionTitle="Used Technology"
-        statusbarItems={apps}
-        phoneItems={designServices}
-      />
+      <PhoneLayout statusbarItems={apps} phoneItems={designServices} />
     </>
   );
 }

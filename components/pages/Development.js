@@ -58,11 +58,7 @@ export default function Development() {
           "Artificial Intelligence"
         ]}
       />
-      <PhoneLayout
-        sectionTitle="Used Technology"
-        statusbarItems={apps}
-        phoneItems={developmentservices}
-      />
+      <PhoneLayout statusbarItems={apps} phoneItems={developmentservices} />
     </>
   );
 }

@@ -52,11 +52,7 @@ export default function Business() {
       <ServicesHive
         items={["Digital Marketing", "Business Management", "Data Analysis"]}
       />
-      <PhoneLayout
-        sectionTitle="Used Technology"
-        statusbarItems={apps}
-        phoneItems={businessServices}
-      />
+      <PhoneLayout statusbarItems={apps} phoneItems={businessServices} />
     </>
   );
 }

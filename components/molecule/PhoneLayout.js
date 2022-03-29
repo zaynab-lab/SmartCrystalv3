@@ -10,7 +10,6 @@ export default function PhoneLayout({
   return (
     <>
       <div className="phonesection">
-        <div className="sectionTitle">{sectionTitle}</div>
         <div className="phone">
           <div className="cameraContainer"></div>
           <div className="phoneTopBar">
@@ -19,6 +18,8 @@ export default function PhoneLayout({
             </div>
           </div>
           <div className="statusBar">
+            <div className="subTitle">Technologies & apps</div>
+
             {statusbarItems.map((item, i) => (
               <div key={i} className="item">
                 {item}
@@ -87,6 +88,7 @@ export default function PhoneLayout({
 
         .statusBar {
           ${styles.flex};
+          ${styles.flexAligncenter};
           color: ${styles.primaryColor};
           gap: 1.6rem;
           border: solid ${styles.primaryColor};
@@ -97,7 +99,7 @@ export default function PhoneLayout({
           height: 6rem;
         }
         .item {
-          min-width: 5rem;
+          min-width: 4rem;
         }
 
         .phoneBody {
@@ -115,7 +117,6 @@ export default function PhoneLayout({
         .subTitle {
           padding-bottom: 0.6rem;
           font-size: 1.2rem;
-          font-weight: bold;
           ${styles.brandGradient};
           background-clip: text;
           -webkit-background-clip: text;
