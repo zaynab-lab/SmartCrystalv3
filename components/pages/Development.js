@@ -30,7 +30,7 @@ const developmentservices = [
   "Process Automation"
 ];
 
-const apps = [
+export const apps = [
   <Reactjs />,
   <Nextjs />,
   <Flutter />,
