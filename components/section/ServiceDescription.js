@@ -41,7 +41,7 @@ export default function ServiceDescription({ text, title, img }) {
           flex: 1 1 12rem;
           text-align: justify;
           text-justify: inter-word;
-          color: ${styles.secondaryColor};
+          color: #444;
         }
 
         .serviceDescription {
