@@ -8,7 +8,7 @@ export default function FeatureImg({ fTitle, imgLink }) {
           <div className="ftitle">{fTitle}</div>
         </div>
         <div className="fImg">
-          <img width="100%" src={`/img/features/${imgLink}.png`} alt="" />
+          <img width="100%" src={`/img/png/features/${imgLink}.png`} alt="" />
         </div>
       </div>
       <style jsx>{`
@@ -19,7 +19,7 @@ export default function FeatureImg({ fTitle, imgLink }) {
 
         .ftitleContainer {
           background: ${styles.borderGradient};
-          padding: 0.15rem 0;
+          padding-top: 0.15rem;
         }
         .ftitle {
           padding: 0.6rem 0.8rem;

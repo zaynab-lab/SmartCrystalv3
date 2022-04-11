@@ -20,7 +20,7 @@ export default function Use({ apps }) {
           margin: auto;
         }
         .appsTitle {
-          font-size: 1.3rem;
+          font-size: 1.4rem;
           font-weight: bold;
           ${styles.brandGradient};
           background-clip: text;
@@ -36,7 +36,7 @@ export default function Use({ apps }) {
         }
 
         .appicon {
-          min-width: 4rem;
+          min-width: 3rem;
         }
       `}</style>
     </>

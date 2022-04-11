@@ -7,7 +7,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import Use from "@/components/molecule/Use";
-
+import Boom from "@/public/img/text/Boom";
+import YourCustomers from "@/public/img/text/YourCustomers";
+import CTA from "@/components/atom/CTA";
 import { Pagination } from "swiper";
 import { apps } from "./Development";
 import { styles } from "@/public/js/styles";
@@ -36,6 +38,10 @@ export default function WebDev() {
   return (
     <>
       <Use apps={apps} />
+      <div className="boom">
+        <YourCustomers />
+        <Boom />
+      </div>
       <Tab tabs={tabs} title="Features" />
       <Swiper
         style={{
@@ -57,6 +63,15 @@ export default function WebDev() {
           <FeatureImg fTitle="Fast" imgLink="SmartPhoneMan" />
         </SwiperSlide>
       </Swiper>
+      <CTA />
+      <style jsx>{`
+        .boom {
+          padding: 0rem 2rem;
+          padding-top: 1rem;
+          max-width: 40rem;
+          margin: auto;
+        }
+      `}</style>
     </>
   );
 }

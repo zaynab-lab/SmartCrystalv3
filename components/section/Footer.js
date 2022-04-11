@@ -104,7 +104,7 @@ export default function Footer() {
         .copyright {
           padding: 1rem;
           text-align: center;
-          font-size: 1rem;
+          font-size: 0.8rem;
         }
       `}</style>
     </>
