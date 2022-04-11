@@ -6,15 +6,15 @@ import { FaPhone, FaUserAlt } from "react-icons/fa";
 
 const team = [
   {
-    name: "Zohair El Khalsan",
+    name: "Zuhair Al Khalsan",
     role: "Founder",
-    mail: "zohair@scrystal.com",
-    phone: ""
+    mail: "zuhair@scrystalit.com",
+    phone: "+971 5510 22 100"
   },
   {
     name: "Abdallah Mobarak",
     role: "Co-Founder & CEO",
-    mail: "abdallah@scrystal.com",
+    mail: "abdallah@scrystalit.com",
     phone: "+961 7009 75 33"
   }
 ];
@@ -38,7 +38,7 @@ export default function Footer() {
                     </span>
                     {member.name}
                   </div>
-                  <div className="memberDesc">{member.role}</div>
+                  <div className="memberRole">{member.role}</div>
                   <div className="memberDesc">{member.mail}</div>
                   <div className="memberDesc">
                     {member.phone && `ph : ${member.phone}`}
@@ -96,7 +96,15 @@ export default function Footer() {
         }
         .memberDesc {
           padding-left: 2.6rem;
+          font-size: 0.9rem;
         }
+        .memberRole {
+          padding-left: 2.6rem;
+          padding-bottom: 0.3rem;
+          font-size: 1.1rem;
+          color: ${styles.grey};
+        }
+
         .map {
           max-width: 30rem;
           margin: auto;

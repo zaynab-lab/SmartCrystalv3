@@ -9,16 +9,16 @@ export default function TextBox({ text }) {
       <style jsx>{`
         .textbox {
           ${styles.borderGradient};
-          padding: 0.25rem;
+          padding: 0.2rem;
           border-radius: 1rem;
         }
         .textboxContent {
           background: white;
           padding: 1rem;
           text-align: justify;
-          text-justify: inter-word;
+          text-justify: inter-character;
           border-radius: 0.75rem;
-          color: ${styles.secondaryColor};
+          color: #444;
         }
       `}</style>
     </>

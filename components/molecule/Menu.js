@@ -8,7 +8,7 @@ export const pageLists = [
   {
     title: "Services",
     name: "Services",
-    sublist: ["Development", "Design", "Business"]
+    sublist: ["Development", "Photography", "Design", "Business"]
   },
   { title: "About", name: "About" },
   { title: "Contact us", name: "Contact" }

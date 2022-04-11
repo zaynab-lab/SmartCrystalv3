@@ -13,7 +13,7 @@ export default function FeatureImg({ fTitle, imgLink }) {
       </div>
       <style jsx>{`
         .featureContainer {
-          max-width: 40rem;
+          max-width: 60rem;
           margin: auto;
         }
 

@@ -10,6 +10,7 @@ import { businessServices } from "@/components/pages/Business";
 import BusinessH from "@/public/img/svg/BusinessH";
 import Design from "@/public/img/svg/Design";
 import ServicesHive from "@/components/molecule/ServicesHive";
+import PhotographyLogo from "@/public/img/svg/PhotographyLogo";
 
 export default function Services() {
   return (
@@ -42,6 +43,19 @@ export default function Services() {
                 <Simplebtn
                   content="Development page"
                   link="/Development"
+                  margin={true}
+                />
+              </div>
+            </div>
+            <div className="section">
+              {/* <div className="servicesTitle">Photography</div> */}
+              <div className="photoLogo">
+                <PhotographyLogo />
+              </div>
+              <div>
+                <Simplebtn
+                  content="Photography page"
+                  link="/Photography"
                   margin={true}
                 />
               </div>
@@ -114,6 +128,10 @@ export default function Services() {
         .section:nth-child(2) {
           background: #f4f9ff;
         }
+        .section:nth-child(3) {
+          background: #f4f9ff;
+        }
+
         .developmentSection {
           max-width: 40rem;
           margin: auto;
@@ -130,6 +148,10 @@ export default function Services() {
         }
         .phoneBusinessHive {
           display: none;
+        }
+        .photoLogo {
+          max-width: 30rem;
+          margin: auto;
         }
 
         @media only screen and (max-width: 600px) {
