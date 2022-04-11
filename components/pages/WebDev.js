@@ -8,11 +8,10 @@ import "swiper/css";
 import "swiper/css/pagination";
 import Use from "@/components/molecule/Use";
 import Boom from "@/public/img/text/Boom";
+
 import YourCustomers from "@/public/img/text/YourCustomers";
-import CTA from "@/components/atom/CTA";
 import { Pagination } from "swiper";
 import { apps } from "./Development";
-import { styles } from "@/public/js/styles";
 
 const tabs = [
   {
@@ -63,7 +62,6 @@ export default function WebDev() {
           <FeatureImg fTitle="Fast" imgLink="SmartPhoneMan" />
         </SwiperSlide>
       </Swiper>
-      <CTA />
       <style jsx>{`
         .boom {
           padding: 0rem 2rem;

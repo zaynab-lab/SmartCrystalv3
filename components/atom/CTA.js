@@ -2,7 +2,7 @@ export default function CTA() {
   return (
     <>
       <div className="cta">
-        <a href="https://wa.me/+96170097533">
+        <a href="https://wa.me/+96170097533?text=Hi">
           <svg
             width="100%"
             height="100%"
@@ -45,7 +45,7 @@ export default function CTA() {
       <style jsx>{`
         .cta {
           padding: 2rem;
-          max-width: 40rem;
+          max-width: 26rem;
           margin: auto;
         }
       `}</style>

@@ -49,7 +49,7 @@ export default function PhoneLayout({ statusbarItems, phoneItems }) {
 
         .phone {
           background: white;
-          max-width: 40rem;
+          max-width: 20rem;
           height: 38rem;
           margin: 5vh auto;
           border-radius: 3rem;

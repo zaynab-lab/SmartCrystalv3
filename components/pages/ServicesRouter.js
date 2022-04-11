@@ -9,6 +9,7 @@ import DigitalM from "./DigitalM";
 import GraphicDesign from "./GraphicDesign";
 import SysDev from "./SysDev";
 import WebDev from "./WebDev";
+import CTA from "@/components/atom/CTA";
 
 export default function ServiceRouter({ service }) {
   return (
@@ -25,6 +26,7 @@ export default function ServiceRouter({ service }) {
         {service === "Business" && <Business />}
         {service === "Business Management" && <BManage />}
         {service === "Data Analysis" && <DataAna />}
+        <CTA />
       </div>
       <style jsx>{`
         .servicesRouter {
