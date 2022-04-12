@@ -29,7 +29,7 @@ export const businessServices = [
   "Business Plan & Business Model"
 ];
 
-const apps = [
+export const apps = [
   <PowerBI />,
   <GoogleDrive />,
   <Analytics />,

@@ -3,10 +3,14 @@ import Serve from "@/public/img/text/Serve";
 import FeatureImg from "../molecule/FeatureImg";
 import WeHelp from "@/components/molecule/WeHelp";
 import Plot from "@/public/img/text/Plot";
+import Use from "../molecule/Use";
+import { apps } from "./Business";
 
 export default function BManage() {
   return (
     <>
+      <Use apps={apps} />
+
       <div className="rocket">
         <Grow />
       </div>

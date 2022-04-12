@@ -90,13 +90,13 @@ export default function Tab({ tabs }) {
         }
         .tabContent {
           padding-top: 2rem;
-          font-weight: bold;
           ${styles.flex};
           ${styles.justifyBetween};
           flex-wrap: wrap;
           gap: 0rem 3rem;
         }
         .tabTitle {
+          font-weight: bold;
           font-size: 1.6rem;
           padding: 1rem 0rem;
         }

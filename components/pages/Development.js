@@ -10,6 +10,8 @@ import GraphQl from "@/public/img/apps/GraphQl";
 import Neo4j from "@/public/img/apps/Neo4j";
 import Nodejs from "@/public/img/apps/Nodejs";
 import MongoDB from "@/public/img/apps/MongoDB";
+import Boom from "@/public/img/text/Boom";
+import YourCustomers from "@/public/img/text/YourCustomers";
 
 const developmentservices = [
   "Company Profile",
@@ -50,6 +52,7 @@ export default function Development() {
         img={"devImg"}
         title={"Development & Technology"}
       />
+
       <ServicesHive
         items={[
           "Web Development",
@@ -58,7 +61,20 @@ export default function Development() {
           "Artificial Intelligence"
         ]}
       />
+      <div className="boom">
+        <YourCustomers />
+        <Boom />
+      </div>
+
       <PhoneLayout statusbarItems={apps} phoneItems={developmentservices} />
+      <style jsx>{`
+        .boom {
+          padding: 0rem 2rem;
+          padding-top: 1rem;
+          max-width: 40rem;
+          margin: auto;
+        }
+      `}</style>
     </>
   );
 }

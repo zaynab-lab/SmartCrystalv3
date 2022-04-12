@@ -2,11 +2,14 @@ import WeLove from "@/public/img/text/WeLove";
 import Engage from "@/public/img/text/Engage";
 import WeHelp from "@/components/molecule/WeHelp";
 import Tree from "@/public/img/text/Tree";
+import Use from "../molecule/Use";
+import { apps } from "./Business";
 
 export default function DigitalM() {
   return (
     <>
       <div className="digitalContainer">
+        <Use apps={apps} />
         <div className="digitalImages">
           <WeLove />
           <div className="engage">

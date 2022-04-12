@@ -8,6 +8,9 @@ import Blender from "@/public/img/svg/Blender";
 import InDesign from "@/public/img/svg/designApps/InDesign";
 import Premier from "@/public/img/svg/designApps/Premier";
 import AfterEffects from "@/public/img/svg/designApps/AfterEffects";
+import YourCustomers from "@/public/img/text/YourCustomers";
+import Boom from "@/public/img/text/Boom";
+import DesignHive from "@/public/img/svg/DesignHive";
 
 export const designServices = [
   "Logo Design",
@@ -24,7 +27,7 @@ export const designServices = [
   "Video Editing"
 ];
 
-const apps = [
+export const apps = [
   <Figma />,
   <Photoshop />,
   <AdobeIllistrator />,
@@ -43,7 +46,28 @@ export default function Design() {
         img={"designImg"}
         title={"Design & Montage"}
       />
+      <div className="designHive">
+        <DesignHive />
+      </div>
+      <div className="boom">
+        <YourCustomers />
+        <Boom />
+      </div>
+
       <PhoneLayout statusbarItems={apps} phoneItems={designServices} />
+      <style jsx>{`
+        .designHive {
+          max-width: 19rem;
+          margin: auto;
+        }
+
+        .boom {
+          padding: 0rem 2rem;
+          padding-top: 1rem;
+          max-width: 40rem;
+          margin: auto;
+        }
+      `}</style>
     </>
   );
 }
