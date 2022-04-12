@@ -8,6 +8,7 @@ import MyBusiness from "@/public/img/svg/businessApps/MyBusiness";
 import Optimize from "@/public/img/svg/businessApps/Optimize";
 import PowerBI from "@/public/img/svg/businessApps/PowerBI";
 import TagManager from "@/public/img/svg/businessApps/TagManager";
+import Grow from "@/public/img/text/Grow";
 import PhoneLayout from "../molecule/PhoneLayout";
 import ServicesHive from "../molecule/ServicesHive";
 import ServiceDescription from "../section/ServiceDescription";
@@ -52,7 +53,19 @@ export default function Business() {
       <ServicesHive
         items={["Digital Marketing", "Business Management", "Data Analysis"]}
       />
+      <div className="rocket">
+        <Grow />
+      </div>
+
       <PhoneLayout statusbarItems={apps} phoneItems={businessServices} />
+      <style jsx>{`
+        .rocket {
+          padding: 0rem 2rem;
+          padding-top: 1rem;
+          max-width: 40rem;
+          margin: auto;
+        }
+      `}</style>
     </>
   );
 }

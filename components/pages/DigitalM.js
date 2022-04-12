@@ -8,8 +8,9 @@ import { apps } from "./Business";
 export default function DigitalM() {
   return (
     <>
+      <Use apps={apps} />
+
       <div className="digitalContainer">
-        <Use apps={apps} />
         <div className="digitalImages">
           <WeLove />
           <div className="engage">
