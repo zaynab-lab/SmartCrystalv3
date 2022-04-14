@@ -9,13 +9,13 @@ export default function Photography() {
           <div className="photoLogo">
             <PhotographyLogo />
           </div>
-          <div>
+
+          <div className="photographyTypes">
             <div>Portrait & Retouching</div>
             <div>Watches Photography</div>
             <div>Still Life Photography</div>
             <div>Products Photography</div>
             <div>Jewellery Photography</div>
-
             <div>City Scape Photography</div>
           </div>
         </div>
@@ -29,6 +29,9 @@ export default function Photography() {
         .photoLogo {
           max-width: 30rem;
           margin: auto;
+        }
+        .photographyTypes {
+          padding: 2rem;
         }
       `}</style>
     </>

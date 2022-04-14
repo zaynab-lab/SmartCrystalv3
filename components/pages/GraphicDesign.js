@@ -8,6 +8,7 @@ import Use from "../molecule/Use";
 import { apps } from "./Design";
 import DesignIllustrator from "@/public/img/text/DesignIllustrator";
 import WeHelp from "../molecule/WeHelp";
+import FeatureImg from "../molecule/FeatureImg";
 
 const tabs = [
   {
@@ -41,7 +42,7 @@ export default function GraphicDesign() {
       </div>
 
       <Tab tabs={tabs} title="Features" />
-
+      <FeatureImg fTitle="Brainstorming" imgLink="GraphicDesignproject" />
       <WeHelp
         list={[
           "Logo Design",

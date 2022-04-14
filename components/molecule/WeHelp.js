@@ -11,7 +11,7 @@ export default function WeHelp({ list, img }) {
               <li key={i}>{item}</li>
             ))}
           </ul>
-          <div className="helpImg">{img}</div>
+          {img && <div className="helpImg">{img}</div>}
         </div>
       </div>
       <style jsx>{`

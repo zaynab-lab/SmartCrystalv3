@@ -4,6 +4,7 @@ import Scalable from "@/public/img/tabs/Scalable";
 import Tab from "../molecule/Tab";
 import SystemDeveloper from "@/public/img/text/SystemDeveloper";
 import PowerfulSystem from "@/public/img/text/PowerfulSystem";
+import WeHelp from "../molecule/WeHelp";
 
 const tabs = [
   {
@@ -33,6 +34,9 @@ export default function SysDev() {
         <SystemDeveloper />
       </div>
       <Tab tabs={tabs} title="Features" />
+      <WeHelp
+        list={["System Re-design", "System Integration", "System Development"]}
+      />
 
       <style jsx>{`
         .sysIllustrator {
