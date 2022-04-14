@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import Use from "@/components/molecule/Use";
-import Boom from "@/public/img/text/Boom";
+import DeveloperWorking from "@/public/img/text/DeveloperWorking";
 
 import YourCustomers from "@/public/img/text/YourCustomers";
 import { Pagination } from "swiper";
@@ -40,7 +40,7 @@ export default function AppDev() {
       <div className="boom">
         <YourCustomers />
 
-        <Boom />
+        <DeveloperWorking />
       </div>
 
       <Tab tabs={tabs} title="Features" />

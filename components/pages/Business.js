@@ -9,6 +9,7 @@ import Optimize from "@/public/img/svg/businessApps/Optimize";
 import PowerBI from "@/public/img/svg/businessApps/PowerBI";
 import TagManager from "@/public/img/svg/businessApps/TagManager";
 import Grow from "@/public/img/text/Grow";
+import FeatureImg from "../molecule/FeatureImg";
 import PhoneLayout from "../molecule/PhoneLayout";
 import ServicesHive from "../molecule/ServicesHive";
 import ServiceDescription from "../section/ServiceDescription";
@@ -50,12 +51,15 @@ export default function Business() {
         img={"businessImg"}
         title={"Business & Marketing"}
       />
-      <ServicesHive
-        items={["Digital Marketing", "Business Management", "Data Analysis"]}
-      />
-      <div className="rocket">
-        <Grow />
+      <div className="shive">
+        <ServicesHive
+          items={["Digital Marketing", "Business Management", "Data Analysis"]}
+        />
       </div>
+      <FeatureImg fTitle="Strategy" imgLink="Peoplecompany" />
+      {/* <div className="rocket">
+        <Grow />
+      </div> */}
 
       <PhoneLayout statusbarItems={apps} phoneItems={businessServices} />
       <style jsx>{`
@@ -64,6 +68,9 @@ export default function Business() {
           padding-top: 1rem;
           max-width: 40rem;
           margin: auto;
+        }
+        .shive {
+          padding-bottom: 2rem;
         }
       `}</style>
     </>

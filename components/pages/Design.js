@@ -9,7 +9,7 @@ import InDesign from "@/public/img/svg/designApps/InDesign";
 import Premier from "@/public/img/svg/designApps/Premier";
 import AfterEffects from "@/public/img/svg/designApps/AfterEffects";
 import YourCustomers from "@/public/img/text/YourCustomers";
-import Boom from "@/public/img/text/Boom";
+import DesignIllustrator from "@/public/img/text/DesignIllustrator";
 import DesignHive from "@/public/img/svg/DesignHive";
 
 export const designServices = [
@@ -51,7 +51,7 @@ export default function Design() {
       </div>
       <div className="boom">
         <YourCustomers />
-        <Boom />
+        <DesignIllustrator />
       </div>
 
       <PhoneLayout statusbarItems={apps} phoneItems={designServices} />

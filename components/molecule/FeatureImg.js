@@ -30,6 +30,7 @@ export default function FeatureImg({ fTitle, imgLink }) {
         }
         .fImg {
           overflow: hidden;
+          background: ${styles.borderGradient};
         }
       `}</style>
     </>

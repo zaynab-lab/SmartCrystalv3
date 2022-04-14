@@ -8,26 +8,30 @@ export default function Tab({ tabs }) {
     <>
       <div className="tabComponent">
         <div className="features">Features</div>
-        <div className="tabsContainer">
-          <div className="tabs">
-            {tabs.map((tab, i) => (
-              <div
-                className={`tab tab${i} ${Tab === i && `active${i}`}`}
-                key={i}
-                onClick={() => {
-                  setTab(i);
-                }}
-              >
-                {tab.title}
+        <div className="tablet">
+          <div className="tabletMarg">
+            <div className="tabsContainer">
+              <div className="tabs">
+                {tabs.map((tab, i) => (
+                  <div
+                    className={`tab tab${i} ${Tab === i && `active${i}`}`}
+                    key={i}
+                    onClick={() => {
+                      setTab(i);
+                    }}
+                  >
+                    {tab.title}
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-        <div className="tabContent">
-          <div className="tabImg">{tabs[Tab].img}</div>
-          <div className="tabText">
-            <div className={`tabTitle tab${Tab}`}>{tabs[Tab].title}</div>
-            <div>{tabs[Tab].text}</div>
+            </div>
+            <div className="tabContent">
+              <div className="tabImg">{tabs[Tab].img}</div>
+              <div className="tabText">
+                <div className={`tabTitle tab${Tab}`}>{tabs[Tab].title}</div>
+                <div>{tabs[Tab].text}</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -49,7 +53,7 @@ export default function Tab({ tabs }) {
 
         .tabsContainer {
           background: ${styles.borderGradient};
-          padding: 0.15rem;
+          padding: 0.1rem;
           border-radius: 2rem;
           max-width: 26rem;
           margin: auto;
@@ -65,7 +69,7 @@ export default function Tab({ tabs }) {
         .tab {
           border-radius: 2rem;
           cursor: pointer;
-          padding: 0.4rem 0.6rem;
+          padding: 0.4rem 0.8rem;
         }
         .tab0 {
           color: ${styles.secondaryColor};

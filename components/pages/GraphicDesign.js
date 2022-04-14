@@ -39,7 +39,9 @@ export default function GraphicDesign() {
         <YourCustomers />
         <Boom />
       </div>
+
       <Tab tabs={tabs} title="Features" />
+
       <WeHelp
         list={[
           "Logo Design",
@@ -60,7 +62,7 @@ export default function GraphicDesign() {
         .boom {
           padding: 0rem 2rem;
           padding-top: 1rem;
-          max-width: 40rem;
+          max-width: 30rem;
           margin: auto;
         }
       `}</style>
