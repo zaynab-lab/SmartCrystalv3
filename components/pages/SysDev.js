@@ -35,7 +35,12 @@ export default function SysDev() {
       </div>
       <Tab tabs={tabs} title="Features" />
       <WeHelp
-        list={["System Re-design", "System Integration", "System Development"]}
+        list={[
+          "System Re-design",
+          "System Integration",
+          "System Development",
+          "Organizational Integration"
+        ]}
       />
 
       <style jsx>{`
