@@ -12,6 +12,7 @@ import Nodejs from "@/public/img/apps/Nodejs";
 import MongoDB from "@/public/img/apps/MongoDB";
 import Boom from "@/public/img/text/Boom";
 import YourCustomers from "@/public/img/text/YourCustomers";
+import FeatureImg from "../molecule/FeatureImg";
 
 const developmentservices = [
   "Company Profile",
@@ -65,6 +66,7 @@ export default function Development() {
         <YourCustomers />
         <Boom />
       </div>
+      <FeatureImg fTitle="Team Working" imgLink="DevelopmentGrop" />
 
       <PhoneLayout statusbarItems={apps} phoneItems={developmentservices} />
       <style jsx>{`

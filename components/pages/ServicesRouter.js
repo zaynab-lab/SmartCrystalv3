@@ -26,6 +26,7 @@ export default function ServiceRouter({ service }) {
         {service === "Business" && <Business />}
         {service === "Business Management" && <BManage />}
         {service === "Data Analysis" && <DataAna />}
+
         <CTA />
       </div>
       <style jsx>{`

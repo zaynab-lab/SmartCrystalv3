@@ -62,7 +62,6 @@ export default function HomeHeader() {
           max-width: 100vw;
           border-bottom: 1px solid lightgray;
           padding-top: 4rem;
-          min-height: 100vh;
           overflow: hidden;
           ${styles.flex};
           ${styles.flexJustifycenter};
@@ -71,7 +70,7 @@ export default function HomeHeader() {
         .homeHeaderContent {
           width: 100%;
           max-width: 70rem;
-          padding: 1rem 3rem;
+          padding: 1rem 2rem;
           padding-bottom: 0;
         }
         .heighlight {
@@ -79,10 +78,14 @@ export default function HomeHeader() {
           ${styles.flexAligncenter};
           ${styles.justifyBetween};
           gap: 1rem;
+          border-radius: 1rem 20rem 1rem 20rem;
         }
         .logoSymbol {
-          width: 9rem;
-          height: 9rem;
+          width: 8.6rem;
+          height: 8.6rem;
+          padding: 0.3rem;
+          border-radius: 50%;
+          background: ${styles.brandGradient};
         }
 
         .smelogo {
@@ -91,23 +94,14 @@ export default function HomeHeader() {
         }
 
         .secret {
-          padding: 1rem 0rem;
+          padding: 2rem 0rem;
           max-width: 35rem;
-          min-height: 35vh;
+          min-height: 20vh;
           ${styles.flex};
           ${styles.flexBothcenter};
           margin: auto;
         }
-        .title {
-          color: ${styles.primaryColor};
-          font-weight: bold;
-          font-size: clamp(1.8rem, 1rem + 1vw, 5rem);
-        }
-        .strong {
-          padding-top: 2rem;
-          color: ${styles.primaryColor};
-          font-size: clamp(2.4rem, 2rem + 1vw, 9rem);
-        }
+
         .btnContainer {
           padding: 2rem 0rem;
           max-width: 35rem;
@@ -122,7 +116,7 @@ export default function HomeHeader() {
         }
         .blendContainer {
           position: absolute;
-          bottom: 0;
+          left: 0;
           width: 100vw;
           height: 100vh;
           z-index: -1;
@@ -130,9 +124,9 @@ export default function HomeHeader() {
 
         .bblend {
           position: absolute;
-          width: 130vw;
-          bottom: -70vh;
-          right: 0;
+          top: 0;
+          left: 0;
+          width: 100vw;
           opacity: 0.8;
         }
         @media only screen and (max-width: 600px) {
@@ -140,9 +134,8 @@ export default function HomeHeader() {
             display: none;
           }
           .bblend {
-            width: 140vw;
-            bottom: -16vh;
-            left: -12rem;
+            width: 130vw;
+            left: -5rem;
           }
         }
       `}</style>
