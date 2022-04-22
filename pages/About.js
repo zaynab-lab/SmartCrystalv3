@@ -2,7 +2,6 @@ import PageLayout from "@/components/PageLayout";
 import AboutSection from "@/components/section/About";
 import Header from "@/components/section/Header";
 import Thank from "@/components/section/Thank";
-import { styles } from "@/public/js/styles";
 
 export default function About() {
   return (
