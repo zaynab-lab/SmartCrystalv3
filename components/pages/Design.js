@@ -44,7 +44,7 @@ export default function Design() {
     <>
       <ServiceDescription
         text={text}
-        img={"designImg"}
+        img={"DesignImg"}
         title={"Design & Montage"}
       />
       <div className="designHive">

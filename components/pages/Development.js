@@ -13,6 +13,7 @@ import MongoDB from "@/public/img/apps/MongoDB";
 import Boom from "@/public/img/text/Boom";
 import YourCustomers from "@/public/img/text/YourCustomers";
 import FeatureImg from "../molecule/FeatureImg";
+import CostEstimation from "../atom/CostEstimation";
 
 const developmentservices = [
   "Company Profile",
@@ -67,8 +68,9 @@ export default function Development() {
         <Boom />
       </div>
       <FeatureImg fTitle="Team Working" imgLink="DevelopmentGrop" />
-
       <PhoneLayout statusbarItems={apps} phoneItems={developmentservices} />
+      <CostEstimation />
+
       <style jsx>{`
         .boom {
           padding: 0rem 2rem;

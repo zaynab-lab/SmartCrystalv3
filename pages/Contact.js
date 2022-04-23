@@ -2,6 +2,7 @@ import PageLayout from "@/components/PageLayout";
 import Header from "@/components/section/Header";
 import CTA from "@/components/atom/CTA";
 import Thank from "@/components/section/Thank";
+import CostEstimation from "@/components/atom/CostEstimation";
 
 export default function Contact() {
   return (
@@ -18,10 +19,9 @@ export default function Contact() {
             </div>
           }
         />
-
+        <CostEstimation />
         <CTA />
       </PageLayout>
-      <style jsx>{``}</style>
     </>
   );
 }

@@ -6,6 +6,7 @@ import Madeit from "@/components/section/Madeit";
 import Process from "@/components/section/Process";
 import ServicesSection from "@/components/section/ServicesSection";
 import PageLayout from "@/components/PageLayout";
+import CostEstimation from "@/components/atom/CostEstimation";
 
 export default function IndexPage() {
   return (
@@ -17,6 +18,7 @@ export default function IndexPage() {
           <Phone />
           <Madeit />
           <Process />
+          <CostEstimation />
           <ServicesSection />
         </div>
       </PageLayout>

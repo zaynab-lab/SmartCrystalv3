@@ -6,11 +6,13 @@ import { FaFilePdf } from "react-icons/fa";
 import ReactToPrint from "react-to-print";
 import { useEffect, useRef, useState } from "react";
 
-export default function GeneralContract() {
+export default function DevContract() {
   const componentRef = useRef();
   const [minTime, setMinTime] = useState(0);
   const [maxTime, setMaxTime] = useState(0);
+  const [pageCount, setPageCount] = useState(1);
   const [state, setDefaultState] = useState({ lines, techs });
+  const [hourRate, setHourRate] = useState(20);
 
   const setState = (id, field, status) => {
     if (field === "lines") {
@@ -29,30 +31,43 @@ export default function GeneralContract() {
       });
     }
   };
+
   useEffect(() => {
-    let newAverage = state.lines
+    let averageMin = state.lines
       .filter((line) => line.status === "average")
-      .concat(state.techs.filter((tech) => tech.status === "average"));
-    let minValue = state.lines
+      .map((line) => line.min)
+      .concat(
+        state.techs
+          .filter((tech) => tech.status === "average")
+          .map((tech) => tech.min * pageCount)
+      );
+    let averageMax = state.lines
+      .filter((line) => line.status === "average")
+      .map((line) => line.max)
+      .concat(
+        state.techs
+          .filter((tech) => tech.status === "average")
+          .map((tech) => tech.max * pageCount)
+      );
+
+    let minValues = state.lines
       .filter((line) => line.status === "min")
       .map((line) => line.min);
-    let maxValue = state.lines
+    let maxValues = state.lines
       .filter((line) => line.status === "max")
       .map((line) => line.max);
-    let min = newAverage.map((line) => line.min);
-    let max = newAverage.map((line) => line.max);
-    let newMinValue = minValue.concat(maxValue).concat(min);
-    let newMaxValue = minValue.concat(maxValue).concat(max);
-    newMinValue[0] && setMinTime(newMinValue.reduce((a, b) => a + b));
-    newMaxValue[0] && setMaxTime(newMaxValue.reduce((a, b) => a + b));
-  }, [state]);
+    let average = minValues.concat(maxValues);
+
+    setMinTime(average.concat(averageMin).reduce((a, b) => a + b, 0));
+    setMaxTime(average.concat(averageMax).reduce((a, b) => a + b, 0));
+  }, [state, pageCount]);
 
   return (
     <>
       <div className="contractContainer" ref={componentRef}>
         <div className="contractHeaderContainer">
           <div className="contractHeader">
-            <div>General Contract</div>
+            <div>Development Contract</div>
             <div className="symbol">
               <FlatDarkLogo fill={"white"} />
             </div>
@@ -80,24 +95,41 @@ export default function GeneralContract() {
         <Box
           title="Solutions"
           content={lines.map((line, i) => (
-            <Item item={line} type="select" i={i} setState={setState} />
+            <Item key={i} item={line} type="select" i={i} setState={setState} />
           ))}
         />
+        <div className="pageCount">
+          <div>* Total number of pages</div>
+          <input
+            className="pageInput"
+            value={pageCount}
+            onChange={(e) =>
+              e.target.value > 0 &&
+              e.target.value < 41 &&
+              setPageCount(e.target.value)
+            }
+            type="number"
+            min={1}
+            max={42}
+          />
+        </div>
         <Box
           title="Technologies"
           content={techs.map((tech, i) => (
-            <Item item={tech} type="checkbox" i={i} setState={setState} />
+            <Item
+              key={i}
+              item={tech}
+              type="checkbox"
+              i={i}
+              setState={setState}
+            />
           ))}
         />
         <Box
           title="Terms & Conditions"
           content={terms.map((term, i) => (
-            <Item item={term} i={i} />
+            <Item item={term} i={i} key={i} />
           ))}
-        />
-        <Box
-          title="Extra Terms, Conditions & Requirements"
-          content={<div className="extraTerms"></div>}
         />
         <Box
           colored={true}
@@ -106,16 +138,31 @@ export default function GeneralContract() {
               <div className="estimator">
                 Estimated Time (f):{" "}
                 {minTime + maxTime > 0
-                  ? minTime + " " + (minTime !== maxTime && ` - ${maxTime} `)
+                  ? minTime +
+                    " " +
+                    (minTime !== maxTime ? ` - ${maxTime} ` : "")
                   : " ______ "}
-                hours * 12 $/hour
+                hours *{" "}
+                <input
+                  className="pageInput"
+                  value={hourRate}
+                  type="number"
+                  min={12}
+                  max={60}
+                  onChange={(e) =>
+                    e.target.value > 11 &&
+                    e.target.value < 61 &&
+                    setHourRate(e.target.value)
+                  }
+                />{" "}
+                $/hour
               </div>
               <div className="estimator">
                 Estimated cost:{" "}
                 {minTime + maxTime > 0
-                  ? minTime * 12 +
+                  ? minTime * hourRate +
                     " " +
-                    (minTime !== maxTime && ` - ${maxTime * 12} `)
+                    (minTime !== maxTime ? ` - ${maxTime * hourRate} ` : "")
                   : " ______ "}
                 ${" "}
               </div>
@@ -127,6 +174,15 @@ export default function GeneralContract() {
         <div className="signature">
           <div>Deliverying Date: ____________________</div>
           <div>Contract Date: _______________________</div>
+          <div>Smart Crystal Signature: ______________</div>
+          <div>Investor Signature: ___________________</div>
+        </div>
+
+        <Box
+          title="Extra Terms, Conditions & Project Phases"
+          content={<div className="extraTerms"></div>}
+        />
+        <div className="signature">
           <div>Smart Crystal Signature: ______________</div>
           <div>Investor Signature: ___________________</div>
         </div>
@@ -183,6 +239,7 @@ export default function GeneralContract() {
           ${styles.flexAligncenter};
           padding: 0.2rem 0.6rem;
           gap: 0.6rem;
+          font-weight: bold;
         }
         .infoInput {
           flex: 1 1;
@@ -190,6 +247,7 @@ export default function GeneralContract() {
           border-radius: 0.3rem;
           font-size: 1rem;
           width: 8rem;
+          padding-left: 0.3rem;
         }
         .infoLable {
           white-space: nowrap;
@@ -197,17 +255,31 @@ export default function GeneralContract() {
         }
         .detail {
           font-size: 0.8rem;
-          color: #555;
+          color: #777;
         }
+        .pageCount {
+          ${styles.flex};
+          gap: 1rem;
+        }
+        .pageInput {
+          border: 1px solid ${styles.secondaryColor};
+          border-radius: 0.3rem;
+          padding-left: 0.3rem;
+          width: 2rem;
+        }
+
         .extraTerms {
           min-height: 18rem;
         }
         .estimator {
+          ${styles.flex};
+          gap: 1rem;
           color: ${styles.primaryColor};
           ${styles.flex};
           ${styles.flexAligncenter};
           gap: 0.3rem;
           padding: 0.3rem 1rem;
+          white-space: nowrap;
         }
 
         .rate {
@@ -250,7 +322,7 @@ export default function GeneralContract() {
           bottom: 0;
           left: 0;
           width: 100%;
-          font-size: 0.8rem;
+          font-size: 0.9rem;
           font-weight: bold;
         }
 
@@ -285,7 +357,7 @@ export default function GeneralContract() {
     </>
   );
 }
-
+const rangeValue = { 0: "", 1: "min", 2: "average", 3: "max", 4: "max" };
 const Item = ({ item, i, type, setState }) => {
   return (
     <>
@@ -294,15 +366,35 @@ const Item = ({ item, i, type, setState }) => {
         <span className="Box-details">
           <span className="label">{item.label}</span>
           {type === "select" && (
-            <select
-              className="select"
-              onChange={(e) => setState(i, "lines", e.target.value)}
-            >
-              <option value="">select</option>
-              <option value="min">min</option>
-              <option value="average">average</option>
-              <option value="max">max</option>
-            </select>
+            <div className="rangeContainer">
+              {" "}
+              {/* <select
+                className="select"
+                onChange={(e) => setState(i, "lines", e.target.value)}
+              >
+                <option value="">select</option>
+                <option value="min">min</option>
+                <option value="average">average</option>
+                <option value="max">max</option>
+              </select> */}
+              <input
+                type="range"
+                min={0}
+                max={4}
+                defaultValue={0}
+                className="rangeInput"
+                onChange={(e) =>
+                  setState(i, "lines", rangeValue[e.target.value])
+                }
+              />
+              <div className="rangePointer">
+                <div>|</div>
+                <div>|</div>
+                <div>|</div>
+                <div>|</div>
+                <div>|</div>
+              </div>
+            </div>
           )}
 
           {type === "checkbox" && (
@@ -335,15 +427,27 @@ const Item = ({ item, i, type, setState }) => {
           -ms-flex: 1 1 100%;
           flex: 1 1 100%;
           ${styles.flex};
-          ${styles.justifyBetween}
+          ${styles.justifyBetween};
+          ${styles.flexAligncenter}
+        }
+        .rangeContainer {
+          position: relative;
+          height: 1.4rem;
         }
 
-        .select {
-          background: white;
-          padding: 0.1rem;
-          border-radius: 0.2rem;
-          border: 1px solid #aaa;
+        .rangeInput {
           cursor: pointer;
+          width: 4rem;
+        }
+        .rangePointer {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          font-size: 0.3rem;
+          ${styles.flex};
+          ${styles.justifyBetween};
+          padding: 0rem 0.5rem;
+          color: #ccc;
         }
         .checkbox {
           cursor: pointer;

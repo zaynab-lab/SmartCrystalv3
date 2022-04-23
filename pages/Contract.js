@@ -2,9 +2,11 @@ import PageLayout from "@/components/PageLayout";
 import Header from "@/components/section/Header";
 import Thank from "@/components/section/Thank";
 import { styles } from "@/public/js/styles";
-import GeneralContract from "@/components/molecule/GeneralContract";
+import DevContract from "@/components/molecule/DevContract";
+import { useState } from "react";
 
 export default function Contract() {
+  const [contractType, setContractType] = useState("o1");
   return (
     <>
       <PageLayout>
@@ -23,15 +25,19 @@ export default function Contract() {
         <div className="contractContainer">
           <div className="contractType">
             <div> Contract type:</div>
-            <select className="typeSelect">
-              <option>General Contract</option>
-              <option disabled>On Going Offer</option>
-              <option disabled>Development Contract</option>
-              <option disabled>Marketing Contract</option>
+            <select
+              className="typeSelect"
+              onChange={(e) => setContractType(e.target.value)}
+            >
+              <option value="o1">Development Contract</option>
+              <option value="o2">On going offer</option>
+              <option value="o3">Marketing Contract</option>
+              <option value="o4">Design Contract</option>
+              <option value="o5">Montage Contract</option>
             </select>
           </div>
 
-          <GeneralContract />
+          {contractType === "o1" && <DevContract />}
         </div>
       </PageLayout>
       <style jsx>{`

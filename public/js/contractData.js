@@ -12,49 +12,44 @@ export const invInf = [
 ];
 
 export const lines = [
-  { label: "Initializing Project & Management System", min: 30, max: 100 },
-  { label: "Marketing Structure", min: 15, max: 25 },
-  { label: "UX/UI", min: 20, max: 40 },
+  { label: "Initializing Project, & Management System", min: 30, max: 120 },
+  { label: "Marketing Structure", min: 15, max: 35 },
+  { label: "UX/UI & Design System", min: 20, max: 80 },
   { label: "Instalable on Multi-platforms", min: 10, max: 15 },
-  { label: "Animated Components", min: 10, max: 35 },
-  { label: "User Account", min: 20, max: 25 },
+  { label: "Content Creation /Data Collection", min: 10, max: 15 },
+  { label: "User Flow Diagram", min: 10, max: 35 },
+  { label: "Animated Components", min: 10, max: 45 },
+  { label: "Auth System", min: 25, max: 35 },
   { label: "Content Managing System", min: 25, max: 80 },
-  { label: "Data Collection", min: 10, max: 15 },
-  { label: "Management System", min: 50, max: 100 },
-  { label: "Data Analysis", min: 15, max: 20 },
-  { label: "Business Insights", min: 15, max: 20 },
-  { label: "Send Notification", min: 25, max: 30 }
+  { label: "Send Notification", min: 35, max: 40 }
 ];
 
 export const techs = [
-  { label: "Reactjs", min: 10, max: 15 },
-  { label: "React Native", min: 30, max: 60 },
-  { label: "MongoDB", min: 10, max: 25 },
-  { label: "Neo4j", min: 50, max: 75 },
+  { label: "Reactjs", min: 15, max: 25 },
+  { label: "React Native", min: 25, max: 35 },
   { label: "Nextjs", min: 15, max: 25 },
-  { label: "Express", min: 10, max: 20 },
-  { label: "Aws/Google services", min: 30, max: 40 }
+  { label: "MongoDB", min: 15, max: 25 },
+  { label: "Graphql", min: 10, max: 20 },
+  { label: "Neo4j", min: 50, max: 95 },
+  { label: "Nodejs/Express", min: 15, max: 30 },
+  { label: "Aws/Google services", min: 20, max: 40 }
 ];
 
 export const terms = [
   {
     label:
-      "This contract is a rental of an application project for a period of one year, in the event that one of the parties leaves after the application is delivered, the conditions below apply."
+      "Our company is obligated to achive deliveries of the projects, depending on contract Solutions, Technologies and conditions, not less nor more."
   },
   {
     label:
-      "Our company is obligated to achive deliveries of the projects, depending on contract Solutions, Technologies and conditions."
+      "To start the project, the investor must pay a the first two phases (or more) of the project as a pre-payment."
   },
   {
     label:
-      "To start the project, the customer must pay a period of two months as a prepaid payment."
+      "Confirming each phase means that the project will go through the next phase, therfore changing previos phase will cost extra fees"
   },
   {
-    label: "Upon delivery, a three-month payment will be completed."
-  },
-  {
-    label:
-      "The customer is obligated to pay the application fee over a period of 6 months On time, even if he wanted to terminate the contract."
+    label: "Making a phase payment means that the confirmation has been done"
   },
 
   {
@@ -64,10 +59,17 @@ export const terms = [
 
   {
     label:
-      "application maintenance and follow up just includes debuging and data entry(when required)."
+      "Service maintenance and follow up just includes debuging not data entry nor adding new components."
+  },
+  {
+    label:
+      "Service maintenance cost about 20%-80% of the project, and that should be mentioned in the contract."
+  },
+  {
+    label: "Service maintenance should be payed quarterly."
   },
 
   {
-    label: "All copyrights are reserved to Za-apps company."
+    label: "All copyrights are reserved to Smart Crystal company."
   }
 ];
