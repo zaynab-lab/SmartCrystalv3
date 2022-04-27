@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 
 export default function DevContract() {
   const componentRef = useRef();
+  const [discount, setDiscount] = useState(10);
   const [minTime, setMinTime] = useState(0);
   const [maxTime, setMaxTime] = useState(0);
   const [pageCount, setPageCount] = useState(1);
@@ -69,7 +70,7 @@ export default function DevContract() {
           <div className="contractHeader">
             <div>Development Contract</div>
             <div className="symbol">
-              <FlatDarkLogo fill={"white"} />
+              <FlatDarkLogo />
             </div>
           </div>
         </div>
@@ -142,21 +143,25 @@ export default function DevContract() {
                     " " +
                     (minTime !== maxTime ? ` - ${maxTime} ` : "")
                   : " ______ "}
-                hours *{" "}
+                hours
+              </div>
+              <div className="estimator">
+                Hour rate:
                 <input
-                  className="pageInput"
+                  className="pageInput bnone"
                   value={hourRate}
                   type="number"
-                  min={12}
+                  min={8}
                   max={60}
                   onChange={(e) =>
-                    e.target.value > 11 &&
+                    e.target.value > 7 &&
                     e.target.value < 61 &&
                     setHourRate(e.target.value)
                   }
                 />{" "}
                 $/hour
               </div>
+
               <div className="estimator">
                 Estimated cost:{" "}
                 {minTime + maxTime > 0
@@ -166,8 +171,32 @@ export default function DevContract() {
                   : " ______ "}
                 ${" "}
               </div>
-              <div className="estimator">Discount: ~{" ___ "}% </div>
-              <div className="estimator">Total Payment: {" ______ "}$ </div>
+              <div className="estimator">
+                Discount: ~
+                {
+                  <input
+                    className="pageInput bnone                    "
+                    value={discount}
+                    type="number"
+                    min={0}
+                    max={60}
+                    onChange={(e) =>
+                      e.target.value > 0 &&
+                      e.target.value < 61 &&
+                      setDiscount(e.target.value)
+                    }
+                  />
+                }
+                %{" "}
+              </div>
+              <div className="estimator">
+                Total Payment:{" "}
+                {discount > 0 && minTime + maxTime > 0
+                  ? ((((100 - discount) / 100) * (minTime + maxTime)) / 2) *
+                    hourRate
+                  : " ______ "}
+                ${" "}
+              </div>
             </div>
           }
         />
@@ -266,6 +295,10 @@ export default function DevContract() {
           border-radius: 0.3rem;
           padding-left: 0.3rem;
           width: 2rem;
+        }
+        .bnone {
+          border: none;
+          font-weight: bold;
         }
 
         .extraTerms {

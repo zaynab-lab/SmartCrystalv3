@@ -3,7 +3,7 @@ export const invInf = [
   { label: "Address:", flex: "60%", detail: true },
   { label: "Date:", flex: "10%", detail: true },
   { label: "Project Name:", flex: "100%" },
-  { label: "Project Director:", flex: "100%" },
+  { label: "Investor:", flex: "100%" },
   { label: "Phone:", flex: "35%", detail: true },
   { label: "Mail:", flex: "35%", detail: true },
   { label: "Project Manager:", flex: "100%" },
@@ -12,10 +12,10 @@ export const invInf = [
 ];
 
 export const lines = [
-  { label: "Initializing Project, & Management System", min: 30, max: 120 },
-  { label: "Marketing Structure", min: 15, max: 35 },
-  { label: "UX/UI & Design System", min: 20, max: 80 },
-  { label: "Instalable on Multi-platforms", min: 10, max: 15 },
+  { label: "Initializing Project, & Management System", min: 25, max: 120 },
+  { label: "Marketing Structure", min: 10, max: 35 },
+  { label: "UX/UI & Design System", min: 10, max: 80 },
+  { label: "Instalable on Multi-platforms", min: 5, max: 15 },
   { label: "Content Creation /Data Collection", min: 10, max: 15 },
   { label: "User Flow Diagram", min: 10, max: 35 },
   { label: "Animated Components", min: 10, max: 45 },
@@ -38,35 +38,35 @@ export const techs = [
 export const terms = [
   {
     label:
-      "Our company is obligated to achive deliveries of the projects, depending on contract Solutions, Technologies and conditions, not less nor more."
+      "Our Company must deliver the projects based on Contract Solutions, Technologies and conditions, neither less nor more."
   },
   {
     label:
-      "To start the project, the investor must pay a the first two phases (or more) of the project as a pre-payment."
+      "To get started, the investor must pre-pay the first two phases (or more) of the project."
   },
   {
     label:
-      "Confirming each phase means that the project will go through the next phase, therfore changing previos phase will cost extra fees"
+      "By confirming each phase, the project will move on to the next, therefore changing previous phases will cost more."
   },
   {
-    label: "Making a phase payment means that the confirmation has been done"
+    label: "A phase payment signifies that each phase has been confirmed."
   },
 
   {
     label:
-      "Our company is obligated to accept termination under any conditioins. After that, any human rights liability for the company is waived."
+      "The company is required to accept termination under any circumstances. Afterwards, any human rights liability that may exist for the company is waived."
   },
 
   {
     label:
-      "Service maintenance and follow up just includes debuging not data entry nor adding new components."
+      "The maintenance and follow-up of services include only debugging and not adding or changing components."
   },
   {
     label:
-      "Service maintenance cost about 20%-80% of the project, and that should be mentioned in the contract."
+      "Maintenance costs about 20%-80% of a project, and that should also be mentioned in the contract."
   },
   {
-    label: "Service maintenance should be payed quarterly."
+    label: "Service maintenance should be paid quarterly."
   },
 
   {
