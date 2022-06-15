@@ -7,6 +7,8 @@ import Process from "@/components/section/Process";
 import ServicesSection from "@/components/section/ServicesSection";
 import PageLayout from "@/components/PageLayout";
 import CostEstimation from "@/components/atom/CostEstimation";
+import Thank from "@/components/section/Thank";
+import CostEstimatorTabs from "@/components/section/CostEstimatorTabs";
 
 export default function IndexPage() {
   return (
@@ -16,6 +18,8 @@ export default function IndexPage() {
           <HomeHeader />
           <Technology />
           <Phone />
+          <Thank text={<div>Cost Estimator</div>} />
+          <CostEstimatorTabs />
           <Madeit />
           <Process />
           <CostEstimation />

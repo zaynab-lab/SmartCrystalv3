@@ -20,7 +20,7 @@ export default function Madeit() {
         }
         .made div {
           color: white;
-          font-size: calc(1rem + 1vw);
+          font-size: calc(1rem + 0.3vw);
         }
       `}</style>
     </>

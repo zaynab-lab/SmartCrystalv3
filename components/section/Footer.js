@@ -2,19 +2,19 @@ import FlatDarkLogo from "@/public/img/svg/FlatDarkLogo";
 import UAEMap from "@/public/img/svg/UAEMap";
 import SocialMedia from "@/components/section/SocialMedia";
 import { styles } from "@/public/js/styles";
-import { FaPhone, FaUserAlt } from "react-icons/fa";
+import { FaUserAlt } from "react-icons/fa";
 
 const team = [
   {
     name: "Zuhair Al Khalsan",
     role: "Founder",
-    mail: "zuhair@scrystalit.com",
+    mail: "",
     phone: "+971 5510 22 100"
   },
   {
     name: "Abdallah Mobarak",
     role: "Co-Founder & CEO",
-    mail: "abdallah@scrystalit.com",
+    mail: "",
     phone: "+961 7009 75 33"
   }
 ];

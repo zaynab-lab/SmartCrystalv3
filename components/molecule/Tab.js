@@ -2,7 +2,7 @@ import { styles } from "@/public/js/styles";
 import { useState } from "react";
 
 export default function Tab({ tabs }) {
-  const [Tab, setTab] = useState(0);
+  const [tabNumber, setTabNumber] = useState(0);
 
   return (
     <>
@@ -12,12 +12,12 @@ export default function Tab({ tabs }) {
           <div className="tabletMarg">
             <div className="tabsContainer">
               <div className="tabs">
-                {tabs.map((tab, i) => (
+                {tabs?.map((tab, i) => (
                   <div
-                    className={`tab tab${i} ${Tab === i && `active${i}`}`}
+                    className={`tab tab${i} ${tabNumber === i && `active${i}`}`}
                     key={i}
                     onClick={() => {
-                      setTab(i);
+                      setTabNumber(i);
                     }}
                   >
                     {tab.title}
@@ -26,10 +26,12 @@ export default function Tab({ tabs }) {
               </div>
             </div>
             <div className="tabContent">
-              <div className="tabImg">{tabs[Tab].img}</div>
+              <div className="tabImg">{tabs[tabNumber].img}</div>
               <div className="tabText">
-                <div className={`tabTitle tab${Tab}`}>{tabs[Tab].title}</div>
-                <div>{tabs[Tab].text}</div>
+                <div className={`tabTitle tab${tabNumber}`}>
+                  {tabs[tabNumber].title}
+                </div>
+                <div>{tabs[tabNumber].text}</div>
               </div>
             </div>
           </div>

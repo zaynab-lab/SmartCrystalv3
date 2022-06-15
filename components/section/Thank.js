@@ -15,6 +15,7 @@ export default function Thank({ text }) {
           color: white;
           max-width: 70rem;
           margin: auto;
+          font-size: calc(1rem + 0.3vw);
         }
       `}</style>
     </>
