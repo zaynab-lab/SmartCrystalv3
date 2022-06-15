@@ -43,7 +43,7 @@ export default function CostEstimatorTabs() {
         }
 
         .tabsContainer {
-          padding: 0.1rem;
+          padding: 0.1rem 0.5rem;
           max-width: 50rem;
           margin: auto;
         }
@@ -70,7 +70,8 @@ export default function CostEstimatorTabs() {
           cursor: pointer;
           padding: 0.4rem 0.8rem;
           text-align: center;
-          border: 1px solid gray;
+          color: #999;
+          border: 2px solid #999;
         }
 
         .active {

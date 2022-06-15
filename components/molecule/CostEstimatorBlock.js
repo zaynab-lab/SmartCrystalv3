@@ -1,30 +1,36 @@
 import { styles } from "@/public/js/styles";
-import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { useEffect, useRef, useState } from "react";
 import { CgCamera, CgEditContrast, CgWebsite } from "react-icons/cg";
-import { FaFacebook, FaMobileAlt, FaNetworkWired } from "react-icons/fa";
+import {
+  FaDownload,
+  FaFacebook,
+  FaMobileAlt,
+  FaNetworkWired
+} from "react-icons/fa";
 import {
   MdBrandingWatermark,
   MdCamera,
   MdDesignServices,
-  MdNetworkCheck,
   MdOutlineAnimation
 } from "react-icons/md";
+import ReactToPrint from "react-to-print";
 import TextBox from "../atom/TextBox";
 
 const items = [
   {
     title: "Posts Design",
     icon: <MdDesignServices />,
-    max: 60,
+    max: 100,
     value: 7,
     block: ["design", "marketing"],
-    rate: { "8": 28, "12": 24, "61": 20 }
+    rate: { "8": 28, "12": 24, "101": 20 }
   },
   {
     title: "Animated Story",
     icon: <MdOutlineAnimation />,
-    max: 30,
-    value: 5,
+    max: 40,
+    value: 1,
     block: ["design", "marketing"],
     rate: { "8": 50, "12": 45, "60": 40 }
   },
@@ -32,7 +38,7 @@ const items = [
     title: "Website Page",
     icon: <CgWebsite />,
     max: 20,
-    value: 2,
+    value: 0,
     block: ["design"],
     rate: { "8": 120, "12": 110, "30": 100 }
   },
@@ -41,15 +47,16 @@ const items = [
     icon: <MdCamera />,
     max: 60,
     value: 2,
-    block: ["design"],
-    rate: { "8": 28, "12": 24, "60": 20 }
+    block: ["montage"],
+    rate: { "5": 36, "11": 26, "20": 18, "60": 15 }
   },
   {
-    title: "Branding System - lvl",
+    title: "Branding System",
     icon: <MdBrandingWatermark />,
     max: 3,
     value: 0,
     block: ["design"],
+    types: ["No Need", "Small Business", "Medium Business", "Pro"],
     rate: { "1": 300, "2": 800, "3": 1200 }
   },
   {
@@ -66,7 +73,7 @@ const items = [
     max: 8,
     value: 1,
     block: ["marketing"],
-    rate: { "1": 280, "4": 240, "9": 220 }
+    rate: { "1": 240, "4": 220, "9": 200 }
   },
   {
     title: "SM Manag. /month",
@@ -83,7 +90,7 @@ const items = [
     max: 100,
     value: 1,
     block: ["montage"],
-    rate: { "1": 40, "15": 20, "101": 10 }
+    rate: { "5": 40, "15": 30, "30": 20, "101": 10 }
   },
   {
     title: "WebApp",
@@ -131,6 +138,11 @@ const blockTitle = {
 export default function CostEstimatorBlock({ block }) {
   const [values, setValues] = useState([]);
   const [cost, setCost] = useState(2);
+  const [name, setName] = useState();
+  const [number, setNumber] = useState();
+  const router = useRouter();
+
+  const componentRef = useRef();
 
   useEffect(() => {
     setValues(
@@ -160,7 +172,7 @@ export default function CostEstimatorBlock({ block }) {
 
   return (
     <>
-      <div className="block">
+      <div className="block" ref={componentRef}>
         <div className="blockTitle">{blockTitle[block]}</div>
         <TextBox
           text={
@@ -174,8 +186,26 @@ export default function CostEstimatorBlock({ block }) {
                         <div className="costIcon">{item.icon}</div>
                         <div>{item.title}</div>
                       </div>
+                      {!item.types && (
+                        <input
+                          type="number"
+                          value={values[i]}
+                          onChange={(e) =>
+                            setValues(
+                              values.map((value, j) =>
+                                j === i ? e.target.value : value
+                              )
+                            )
+                          }
+                          className="numberInput"
+                        />
+                      )}
+                    </div>
+                    {!item.types ? (
                       <input
-                        type="number"
+                        type="range"
+                        min={0}
+                        max={item.max}
                         value={values[i]}
                         onChange={(e) =>
                           setValues(
@@ -184,29 +214,73 @@ export default function CostEstimatorBlock({ block }) {
                             )
                           )
                         }
-                        className="numberInput"
+                        className="rangeInput"
                       />
-                    </div>
-                    <input
-                      type="range"
-                      min={0}
-                      max={item.max}
-                      value={values[i]}
-                      onChange={(e) =>
-                        setValues(
-                          values.map((value, j) =>
-                            j === i ? e.target.value : value
-                          )
-                        )
-                      }
-                      className="rangeInput"
-                    />
+                    ) : (
+                      <div className="radiogroup">
+                        {item.types.map((itype, h) => (
+                          <div key={h} className="itype">
+                            <input
+                              type="radio"
+                              id={itype}
+                              name="type"
+                              defaultChecked={h === 0}
+                              value={h}
+                              onChange={(e) =>
+                                setValues(
+                                  values.map((value, j) =>
+                                    j === i ? e.target.value : value
+                                  )
+                                )
+                              }
+                            />
+                            <label for={itype}>{itype}</label>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 ))}
               <div className="costRange">
                 {cost}$ - {Math.round(cost + 0.2 * cost)}$
               </div>
-              <div className="orderbtn">Order now</div>
+              <div className="inputCnt">
+                <input
+                  className="input"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Full Name"
+                />
+                <input
+                  className="input"
+                  value={number}
+                  type="number"
+                  onChange={(e) => setNumber(e.target.value)}
+                  placeholder="Phone Number 971 XXX XXX"
+                />
+              </div>
+              {name && number && (
+                <ReactToPrint
+                  trigger={() => (
+                    <div className="downloadbtn">
+                      <FaDownload /> download as pdf then send
+                    </div>
+                  )}
+                  content={() => componentRef.current}
+                />
+              )}
+              <div
+                onClick={() => {
+                  name && number
+                    ? router.push(
+                        "https://wa.me/+96170097533?text=attach the pdf"
+                      )
+                    : alert("please complete fill the form");
+                }}
+                className="orderbtn"
+              >
+                Send now
+              </div>
             </>
           }
         />
@@ -217,13 +291,12 @@ export default function CostEstimatorBlock({ block }) {
           padding: 1rem;
           font-weight: bold;
           ${styles.brandGradient};
-          text-align: center;
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
         .block {
-          padding-top: 0.8rem;
+          padding: 0.6rem 2rem;
         }
         .costPart {
           padding: 1rem;
@@ -274,6 +347,19 @@ export default function CostEstimatorBlock({ block }) {
           padding: 0rem 0.5rem;
           color: #ccc;
         }
+        .radiogroup {
+          ${styles.flex};
+          flex-wrap: wrap;
+          white-space: nowrap;
+          gap: 0.2rem 1rem;
+        }
+
+        .itype {
+          ${styles.flex};
+          ${styles.flexAligncenter};
+          gap: 0.3rem;
+          flex: 1 1 20%;
+        }
 
         .checkbox {
           cursor: pointer;
@@ -285,6 +371,24 @@ export default function CostEstimatorBlock({ block }) {
           color: ${styles.primaryColor};
           padding: 0.6rem;
         }
+        .inputCnt {
+          ${styles.flex};
+          flex-wrap: wrap;
+          gap: 0.6rem;
+          padding: 1rem;
+        }
+        .input {
+          width: 100%;
+          flex: 1 1 100%;
+          padding: 0.3rem 1rem;
+          border: 1px solid #999;
+          border-radius: 0.3rem;
+        }
+        .downloadbtn {
+          color: ${styles.primaryColor};
+          padding-bottom: 0.6rem;
+        }
+
         .orderbtn {
           background: ${styles.primaryColor};
           padding: 0.6rem 2rem;
@@ -294,6 +398,7 @@ export default function CostEstimatorBlock({ block }) {
           width: fit-content;
           margin: auto;
           cursor: pointer;
+          font-weight: bold;
         }
       `}</style>
     </>
