@@ -1,14 +1,10 @@
-import CostEstimatorBlock from "../molecule/CostEstimatorBlock";
+import CostEstimatorTabs from "../section/CostEstimatorTabs";
 
-const ests = ["design", "marketing", "montage", "development"];
+// const ests = ["design", "marketing", "montage", "development"];
 export default function CostEst() {
   return (
     <>
-      {ests.map((est, i) => (
-        <div key={i}>
-          <CostEstimatorBlock block={est} />
-        </div>
-      ))}
+      <CostEstimatorTabs />
     </>
   );
 }
