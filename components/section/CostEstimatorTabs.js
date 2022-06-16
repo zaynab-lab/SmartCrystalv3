@@ -37,7 +37,7 @@ export default function CostEstimatorTabs() {
       </div>
       <style jsx>{`
         .tabComponent {
-          padding: 1rem;
+          padding: 0.6rem;
           max-width: 60rem;
           margin: auto;
         }
@@ -53,7 +53,6 @@ export default function CostEstimatorTabs() {
           ${styles.flexJustifycenter};
           background: white;
           border-radius: 2rem;
-          padding: 0.2rem;
           gap: 0.4rem;
           font-weight: bold;
           white-space: nowrap;

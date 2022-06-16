@@ -234,7 +234,7 @@ export default function CostEstimatorBlock({ block }) {
                                 )
                               }
                             />
-                            <label for={itype}>{itype}</label>
+                            <label htmlFor={itype}>{itype}</label>
                           </div>
                         ))}
                       </div>
@@ -287,8 +287,8 @@ export default function CostEstimatorBlock({ block }) {
       </div>
       <style jsx>{`
         .blockTitle {
-          font-size: 2rem;
-          padding: 1rem;
+          font-size: 1.8rem;
+          padding: 0.6rem;
           font-weight: bold;
           ${styles.brandGradient};
           background-clip: text;
@@ -296,7 +296,7 @@ export default function CostEstimatorBlock({ block }) {
           -webkit-text-fill-color: transparent;
         }
         .block {
-          padding: 0.6rem 0.8rem;
+          padding: 0.4rem;
         }
         .costPart {
           padding: 1rem;
@@ -305,7 +305,7 @@ export default function CostEstimatorBlock({ block }) {
         .costHead {
           ${styles.flex};
           ${styles.justifyBetween};
-          font-size: 1.4rem;
+          font-size: 1.3rem;
           padding-bottom: 0.5rem;
           color: ${styles.primaryColor};
         }
