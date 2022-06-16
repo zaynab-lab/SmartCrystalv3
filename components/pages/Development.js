@@ -14,6 +14,7 @@ import Boom from "@/public/img/text/Boom";
 import YourCustomers from "@/public/img/text/YourCustomers";
 import FeatureImg from "../molecule/FeatureImg";
 import CostEstimation from "../atom/CostEstimation";
+import CostEstimatorBlock from "../molecule/CostEstimatorBlock";
 
 const developmentservices = [
   "Company Profile",
@@ -67,6 +68,7 @@ export default function Development() {
         <YourCustomers />
         <Boom />
       </div>
+      <CostEstimatorBlock block={"development"} />
       <FeatureImg fTitle="Team Working" imgLink="DevelopmentGrop" />
       <PhoneLayout statusbarItems={apps} phoneItems={developmentservices} />
       <CostEstimation />

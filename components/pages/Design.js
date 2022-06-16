@@ -12,6 +12,7 @@ import YourCustomers from "@/public/img/text/YourCustomers";
 import DesignIllustrator from "@/public/img/text/DesignIllustrator";
 import DesignHive from "@/public/img/svg/DesignHive";
 import FeatureImg from "../molecule/FeatureImg";
+import CostEstimatorBlock from "../molecule/CostEstimatorBlock";
 
 export const designServices = [
   "Logo Design",
@@ -54,6 +55,7 @@ export default function Design() {
         <YourCustomers />
         <DesignIllustrator />
       </div>
+      <CostEstimatorBlock block="design" />
       <FeatureImg fTitle="Brainstorming" imgLink="GraphicDesignproject" />
 
       <PhoneLayout statusbarItems={apps} phoneItems={designServices} />

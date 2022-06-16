@@ -9,6 +9,7 @@ import Optimize from "@/public/img/svg/businessApps/Optimize";
 import PowerBI from "@/public/img/svg/businessApps/PowerBI";
 import TagManager from "@/public/img/svg/businessApps/TagManager";
 import Grow from "@/public/img/text/Grow";
+import CostEstimatorBlock from "../molecule/CostEstimatorBlock";
 import FeatureImg from "../molecule/FeatureImg";
 import PhoneLayout from "../molecule/PhoneLayout";
 import ServicesHive from "../molecule/ServicesHive";
@@ -56,6 +57,7 @@ export default function Business() {
           items={["Digital Marketing", "Business Management", "Data Analysis"]}
         />
       </div>
+      <CostEstimatorBlock block="marketing" />
       <FeatureImg fTitle="Strategy" imgLink="Peoplecompany" />
       {/* <div className="rocket">
         <Grow />

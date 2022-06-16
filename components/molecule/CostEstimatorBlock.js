@@ -24,7 +24,7 @@ const items = [
     max: 100,
     value: 7,
     block: ["design", "marketing"],
-    rate: { "8": 28, "12": 24, "101": 20 }
+    rate: { "8": 28, "12": 24, "30": 20, "101": 15 }
   },
   {
     title: "Animated Story",
@@ -296,7 +296,7 @@ export default function CostEstimatorBlock({ block }) {
           -webkit-text-fill-color: transparent;
         }
         .block {
-          padding: 0.6rem 2rem;
+          padding: 0.6rem 0.8rem;
         }
         .costPart {
           padding: 1rem;
