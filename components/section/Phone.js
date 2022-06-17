@@ -33,7 +33,6 @@ export default function Phone() {
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
-          white-space: nowrap;
           animation: fadeleft 1.5s;
         }
         .phoneContainer {
