@@ -8,7 +8,6 @@ import MyBusiness from "@/public/img/svg/businessApps/MyBusiness";
 import Optimize from "@/public/img/svg/businessApps/Optimize";
 import PowerBI from "@/public/img/svg/businessApps/PowerBI";
 import TagManager from "@/public/img/svg/businessApps/TagManager";
-import Grow from "@/public/img/text/Grow";
 import CostEstimatorBlock from "../molecule/CostEstimatorBlock";
 import FeatureImg from "../molecule/FeatureImg";
 import PhoneLayout from "../molecule/PhoneLayout";

@@ -1,4 +1,5 @@
 import Calculator from "@/public/img/svg/Calculator";
+import Grow from "@/public/img/text/Grow";
 import Nomatter from "@/public/img/text/Nomatter";
 import Weoffer from "@/public/img/text/Weoffer";
 import { styles } from "@/public/js/styles";
@@ -11,71 +12,48 @@ export default function CostEst() {
   return (
     <>
       <div className="informCnt">
-        <div className="solution">
-          <div>
-            <Weoffer />
+        <div className="rocket">
+          <Grow />
+        </div>
+        <div className="costTitle">Cost Estimator</div>
+
+        <div className="informationCnt">
+          <div className="inform">
+            <div className="infcircle">
+              <IoMdInformationCircleOutline />
+            </div>
+            <div>Calculate the cost of any service you need.</div>
+          </div>
+
+          <div className="steps">
+            <li>The 1st step is to select your plan</li>
+            <li>The 2nd step is to download pdf</li>
+            <li>The 3rd step is to send the pdf</li>
           </div>
         </div>
 
-        <div className="calculator">
-          <Calculator />
-        </div>
+        <CostEstimatorTabs />
         <div className="solutionCnt">
+          <div className="calculator">
+            <Calculator />
+          </div>
           <div className="solution">
             <div>
               <Nomatter />
             </div>
-          </div>
-        </div>
-        <div className="costTitle">Cost Estimator</div>
-        <TextBox
-          text={
-            <>
-              <div className="inform">
-                <div className="infcircle">
-                  <IoMdInformationCircleOutline />
-                </div>
-                <div> Calculate the cost of any service you need.</div>
-              </div>
-              <div className="steps">
-                <li>The 1st step is to select your plan</li>
-                <li>The 2nd step is to download pdf</li>
-                <li>The 3rd step is to send the pdf</li>
-              </div>
-            </>
-          }
-        />
-      </div>
-      <CostEstimatorTabs />
-      <div className="solutionCnt">
-        <div className="calculator">
-          <Calculator />
-        </div>
-        <div className="solution">
-          <div>
-            <Nomatter />
-          </div>
 
-          <div>
-            <Weoffer />
+            <div>
+              <Weoffer />
+            </div>
           </div>
         </div>
       </div>
 
       <style jsx>{`
-        .costTitle {
-          font-size: 2rem;
-          padding: 1rem;
-          font-weight: bold;
-          ${styles.brandGradient};
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
         .solutionCnt {
           padding: 1rem;
           padding-bottom: 0;
-          max-width: 50rem;
+          max-width: 60rem;
           margin: auto;
           ${styles.flex};
           ${styles.flexAligncenter};
@@ -86,7 +64,6 @@ export default function CostEst() {
         .solution {
           max-width: 20rem;
           margin: auto;
-
           padding: 1rem;
           flex: 1 1 13rem;
         }
@@ -95,12 +72,26 @@ export default function CostEst() {
           margin: auto;
           flex: 1 1 15rem;
         }
+        .costTitle {
+          font-size: 1.6rem;
+          padding: 0.6rem;
+          font-weight: bold;
+          ${styles.brandGradient};
+          background-clip: text;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
 
         .informCnt {
           padding: 1rem;
           padding-top: 1rem;
-          max-width: 60rem;
+          max-width: 40rem;
           margin: auto;
+        }
+        .informationCnt {
+          border: 1px solid #222;
+          border-radius: 0.6rem;
+          padding: 0.6rem;
         }
 
         .inform {
@@ -109,6 +100,7 @@ export default function CostEst() {
           color: ${styles.secondaryColor};
           gap: 0.3rem;
           padding: 0.4rem 0.2rem;
+          padding-top: 0;
           font-size: 1rem;
           font-weight: bold;
         }
@@ -118,7 +110,7 @@ export default function CostEst() {
           padding-top: 0.2rem;
         }
         .steps {
-          color: ${styles.primaryColor};
+          color: #222;
           padding: 0rem 1rem;
           padding-bottom: 0.4rem 0.2rem;
           font-size: 1rem;

@@ -96,28 +96,27 @@ const items = [
   {
     title: "WebApp Page",
     icon: <CgWebsite />,
-    max: 20,
+    max: 30,
     value: 2,
     block: ["development"],
-    rate: { "8": 220, "12": 200, "30": 180 }
+    rate: { "8": 220, "12": 240, "20": 260, "31": 280 }
   },
   {
     title: "UX/UI",
-
     icon: <MdDesignServices />,
-    max: 20,
+    max: 30,
     value: 2,
     block: ["development"],
-    rate: { "8": 120, "12": 110, "30": 100 }
+    rate: { "8": 120, "12": 110, "31": 100 }
   },
 
   {
     title: "System development",
     icon: <FaNetworkWired />,
-    max: 20,
+    max: 30,
     value: 0,
     block: ["development"],
-    rate: { "8": 220, "12": 200, "30": 180 }
+    rate: { "8": 220, "12": 240, "20": 260, "31": 280 }
   },
   {
     title: "Mobile App",
@@ -125,7 +124,7 @@ const items = [
     max: 20,
     value: 0,
     block: ["development"],
-    rate: { "8": 260, "12": 240, "30": 220 }
+    rate: { "8": 260, "12": 280, "20": 300, "31": 320 }
   }
 ];
 
@@ -338,7 +337,6 @@ export default function CostEstimatorBlock({ block }) {
           -webkit-text-fill-color: transparent;
         }
         .block {
-          padding: 0.4rem;
         }
         .costPart {
           padding: 1rem;
@@ -411,7 +409,7 @@ export default function CostEstimatorBlock({ block }) {
           font-weight: bold;
           font-size: 1.6rem;
           color: ${styles.primaryColor};
-          padding: 0.6rem;
+          padding: 0.6rem 0rem;
           padding-bottom: 1.6rem;
         }
         .currancyCnt {

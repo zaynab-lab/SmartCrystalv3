@@ -5,6 +5,7 @@ import Facebook from "@/public/img/social/Facebook";
 import Youtube from "@/public/img/social/Youtube";
 import Tiktok from "@/public/img/social/Tiktok";
 import { styles } from "@/public/js/styles";
+import Link from "next/link";
 
 export const social = [
   {
@@ -18,9 +19,13 @@ export const social = [
     name: "Instagram",
     link: "instagram://user?username=ama.gamix"
   },
-  { logo: <Facebook />, name: "Facebook", link: "" },
+  {
+    logo: <Facebook />,
+    name: "Facebook",
+    link: "https://www.facebook.com/Smart-Crystal-It-112071231364182/"
+  },
   { logo: <Youtube />, name: "Youtube", link: "" },
-  { logo: <Tiktok />, name: "Tiktok", link: "" }
+  { logo: <Tiktok />, name: "Tiktok", link: "tiktok.com/@smartcrystal" }
 ];
 
 export default function SocialMedia() {
@@ -30,8 +35,12 @@ export default function SocialMedia() {
         <div className="socialContainer">
           <div className="socialContent">
             {social.map((platform, i) => (
-              <div key={i} className="icon">
-                {platform.logo}
+              <div key={i}>
+                <Link href={platform.link}>
+                  <div key={i} className="icon">
+                    {platform.logo}
+                  </div>
+                </Link>
               </div>
             ))}
           </div>

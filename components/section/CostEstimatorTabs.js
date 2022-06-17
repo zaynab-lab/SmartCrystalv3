@@ -30,20 +30,21 @@ export default function CostEstimatorTabs() {
             ))}
           </div>
         </div>
-        {tabNumber === 0 && <CostEstimatorBlock block={"design"} />}
-        {tabNumber === 1 && <CostEstimatorBlock block={"marketing"} />}
-        {tabNumber === 2 && <CostEstimatorBlock block={"montage"} />}
-        {tabNumber === 3 && <CostEstimatorBlock block={"development"} />}
       </div>
+      {tabNumber === 0 && <CostEstimatorBlock block={"design"} />}
+      {tabNumber === 1 && <CostEstimatorBlock block={"marketing"} />}
+      {tabNumber === 2 && <CostEstimatorBlock block={"montage"} />}
+      {tabNumber === 3 && <CostEstimatorBlock block={"development"} />}
+
       <style jsx>{`
         .tabComponent {
-          padding: 0.6rem;
-          max-width: 60rem;
+          padding: 0.6rem 0rem;
+          max-width: 40rem;
           margin: auto;
         }
 
         .tabsContainer {
-          padding: 0.1rem 0.5rem;
+          padding-top: 0.5rem;
           max-width: 50rem;
           margin: auto;
         }
