@@ -150,7 +150,7 @@ export default function CostEstimatorBlock({ block }) {
   const [name, setName] = useState();
   const [number, setNumber] = useState();
   const router = useRouter();
-  const [currentCurrancy, setCurrentCurrancy] = useState("OMR");
+  const [currentCurrancy, setCurrentCurrancy] = useState("AED");
   const [culistDisplay, setCulistDisplay] = useState(false);
   const componentRef = useRef();
 
