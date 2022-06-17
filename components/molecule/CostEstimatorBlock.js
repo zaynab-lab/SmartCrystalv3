@@ -138,7 +138,7 @@ const blockTitle = {
 
 const currancy = {
   USD: { flag: "USD 🇺🇸", rate: 1, syb: "$" },
-  AED: { flag: "AED 🇦🇪", rate: 3.76, syb: "AED" },
+  AED: { flag: "AED 🇦🇪", rate: 3.67, syb: "AED" },
   OMR: { flag: "OMR 🇴🇲", rate: 0.3, syb: "OMR" }
 };
 

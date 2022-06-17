@@ -1,3 +1,6 @@
+import Calculator from "@/public/img/svg/Calculator";
+import Nomatter from "@/public/img/text/Nomatter";
+import Weoffer from "@/public/img/text/Weoffer";
 import { styles } from "@/public/js/styles";
 import { IoMdInformationCircleOutline } from "react-icons/io";
 import TextBox from "../atom/TextBox";
@@ -8,6 +11,22 @@ export default function CostEst() {
   return (
     <>
       <div className="informCnt">
+        <div className="solution">
+          <div>
+            <Weoffer />
+          </div>
+        </div>
+
+        <div className="calculator">
+          <Calculator />
+        </div>
+        <div className="solutionCnt">
+          <div className="solution">
+            <div>
+              <Nomatter />
+            </div>
+          </div>
+        </div>
         <div className="costTitle">Cost Estimator</div>
         <TextBox
           text={
@@ -28,6 +47,21 @@ export default function CostEst() {
         />
       </div>
       <CostEstimatorTabs />
+      <div className="solutionCnt">
+        <div className="calculator">
+          <Calculator />
+        </div>
+        <div className="solution">
+          <div>
+            <Nomatter />
+          </div>
+
+          <div>
+            <Weoffer />
+          </div>
+        </div>
+      </div>
+
       <style jsx>{`
         .costTitle {
           font-size: 2rem;
@@ -38,11 +72,34 @@ export default function CostEst() {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
+        .solutionCnt {
+          padding: 1rem;
+          padding-bottom: 0;
+          max-width: 50rem;
+          margin: auto;
+          ${styles.flex};
+          ${styles.flexAligncenter};
+          ${styles.justifyBetween};
+          flex-wrap: wrap;
+        }
+
+        .solution {
+          max-width: 20rem;
+          margin: auto;
+
+          padding: 1rem;
+          flex: 1 1 13rem;
+        }
+        .calculator {
+          max-width: 15rem;
+          margin: auto;
+          flex: 1 1 15rem;
+        }
 
         .informCnt {
           padding: 1rem;
           padding-top: 1rem;
-          max-width: 40rem;
+          max-width: 60rem;
           margin: auto;
         }
 

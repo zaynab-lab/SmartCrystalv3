@@ -1,6 +1,6 @@
 import { styles } from "@/public/js/styles";
 
-export default function ServiceDescription({ text, title, img }) {
+export default function ServiceDescription({ text, title, img, svg }) {
   return (
     <>
       <div className="serviceDescriptionContainer">
@@ -10,6 +10,7 @@ export default function ServiceDescription({ text, title, img }) {
 
           <div className="serviceDescription">
             <img src={`/img/png/${img}.png`} alt="" width="100%" />
+            {svg}
           </div>
         </div>
       </div>
