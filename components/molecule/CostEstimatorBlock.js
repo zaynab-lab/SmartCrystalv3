@@ -316,7 +316,9 @@ export default function CostEstimatorBlock({ block }) {
                     ? router.push(
                         "https://wa.me/+96170097533?text=attach the pdf"
                       )
-                    : alert("please complete fill the form");
+                    : alert(
+                        "please fill the form then download the pdf to send"
+                      );
                 }}
                 className="orderbtn"
               >

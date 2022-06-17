@@ -4,34 +4,34 @@ import Nomatter from "@/public/img/text/Nomatter";
 import Weoffer from "@/public/img/text/Weoffer";
 import { styles } from "@/public/js/styles";
 import { IoMdInformationCircleOutline } from "react-icons/io";
-import TextBox from "../atom/TextBox";
 import CostEstimatorTabs from "../section/CostEstimatorTabs";
 
 // const ests = ["design", "marketing", "montage", "development"];
 export default function CostEst() {
   return (
     <>
-      <div className="informCnt">
+      <div className="costEstimatorPage">
         <div className="rocket">
           <Grow />
         </div>
-        <div className="costTitle">Cost Estimator</div>
+        <div className="informCnt">
+          <div className="costTitle">Cost Estimator</div>
 
-        <div className="informationCnt">
-          <div className="inform">
-            <div className="infcircle">
-              <IoMdInformationCircleOutline />
+          <div className="informationCnt">
+            <div className="inform">
+              <div className="infcircle">
+                <IoMdInformationCircleOutline />
+              </div>
+              <div>Calculate the cost of any service you need.</div>
             </div>
-            <div>Calculate the cost of any service you need.</div>
-          </div>
 
-          <div className="steps">
-            <li>The 1st step is to select your plan</li>
-            <li>The 2nd step is to download pdf</li>
-            <li>The 3rd step is to send the pdf</li>
+            <div className="steps">
+              <li>1st step is to select your plan</li>
+              <li>2nd step is to download pdf</li>
+              <li>3rd step is to send the pdf</li>
+            </div>
           </div>
         </div>
-
         <CostEstimatorTabs />
         <div className="solutionCnt">
           <div className="calculator">
@@ -50,28 +50,15 @@ export default function CostEst() {
       </div>
 
       <style jsx>{`
-        .solutionCnt {
-          padding: 1rem;
-          padding-bottom: 0;
-          max-width: 60rem;
+        .costEstimatorPage {
+        }
+        .rocket {
+          max-width: 40rem;
           margin: auto;
-          ${styles.flex};
-          ${styles.flexAligncenter};
-          ${styles.justifyBetween};
-          flex-wrap: wrap;
+          padding: 1rem;
+          padding-bottom: 0rem;
         }
 
-        .solution {
-          max-width: 20rem;
-          margin: auto;
-          padding: 1rem;
-          flex: 1 1 13rem;
-        }
-        .calculator {
-          max-width: 15rem;
-          margin: auto;
-          flex: 1 1 15rem;
-        }
         .costTitle {
           font-size: 1.6rem;
           padding: 0.6rem;
@@ -83,13 +70,12 @@ export default function CostEst() {
         }
 
         .informCnt {
-          padding: 1rem;
-          padding-top: 1rem;
+          padding: 0.6rem;
           max-width: 40rem;
           margin: auto;
         }
         .informationCnt {
-          border: 1px solid #222;
+          border: 1.5px solid #555;
           border-radius: 0.6rem;
           padding: 0.6rem;
         }
@@ -114,6 +100,30 @@ export default function CostEst() {
           padding: 0rem 1rem;
           padding-bottom: 0.4rem 0.2rem;
           font-size: 1rem;
+        }
+
+        .solutionCnt {
+          padding: 1rem;
+          padding-bottom: 0;
+          max-width: 60rem;
+          margin: auto;
+          ${styles.flex};
+          ${styles.flexAligncenter};
+          ${styles.justifyBetween};
+          flex-wrap: wrap;
+        }
+
+        .solution {
+          max-width: 20rem;
+          margin: auto;
+          padding: 1rem;
+          flex: 1 1 13rem;
+        }
+
+        .calculator {
+          max-width: 15rem;
+          margin: auto;
+          flex: 1 1 15rem;
         }
       `}</style>
     </>

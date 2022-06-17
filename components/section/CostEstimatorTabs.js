@@ -14,7 +14,7 @@ export default function CostEstimatorTabs() {
 
   return (
     <>
-      <div className="tabComponent">
+      <div className="estimatorComponent">
         <div className="tabsContainer">
           <div className="tabs">
             {tabs?.map((tab, i) => (
@@ -30,15 +30,15 @@ export default function CostEstimatorTabs() {
             ))}
           </div>
         </div>
+        {tabNumber === 0 && <CostEstimatorBlock block={"design"} />}
+        {tabNumber === 1 && <CostEstimatorBlock block={"marketing"} />}
+        {tabNumber === 2 && <CostEstimatorBlock block={"montage"} />}
+        {tabNumber === 3 && <CostEstimatorBlock block={"development"} />}
       </div>
-      {tabNumber === 0 && <CostEstimatorBlock block={"design"} />}
-      {tabNumber === 1 && <CostEstimatorBlock block={"marketing"} />}
-      {tabNumber === 2 && <CostEstimatorBlock block={"montage"} />}
-      {tabNumber === 3 && <CostEstimatorBlock block={"development"} />}
 
       <style jsx>{`
-        .tabComponent {
-          padding: 0.6rem 0rem;
+        .estimatorComponent {
+          padding: 0.6rem;
           max-width: 40rem;
           margin: auto;
         }
