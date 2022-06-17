@@ -338,10 +338,9 @@ export default function CostEstimatorBlock({ block }) {
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
-        .block {
-        }
+
         .costPart {
-          padding: 1rem;
+          padding: 0.8rem 0.6rem;
         }
 
         .costHead {
