@@ -10,8 +10,8 @@ export default function Button({ content, logo }) {
       <style jsx>{`
         .btn {
           padding: 0.6rem 1.3rem;
-          border: 3px solid ${styles.primaryColor};
-          border-radius: 20rem;
+          border: 2px solid ${styles.primaryColor};
+          border-radius: 1.6rem;
           ${styles.flex};
           ${styles.flexAligncenter};
           gap: 1.6rem;

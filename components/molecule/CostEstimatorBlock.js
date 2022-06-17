@@ -8,6 +8,7 @@ import {
   FaMobileAlt,
   FaNetworkWired
 } from "react-icons/fa";
+import { IoIosArrowDown } from "react-icons/io";
 import {
   MdBrandingWatermark,
   MdCamera,
@@ -19,7 +20,7 @@ import TextBox from "../atom/TextBox";
 
 const items = [
   {
-    title: "Posts Design",
+    title: "Post Design",
     icon: <MdDesignServices />,
     max: 100,
     value: 7,
@@ -93,7 +94,7 @@ const items = [
     rate: { "5": 40, "15": 30, "30": 20, "101": 10 }
   },
   {
-    title: "WebApp",
+    title: "WebApp Page",
     icon: <CgWebsite />,
     max: 20,
     value: 2,
@@ -135,13 +136,22 @@ const blockTitle = {
   development: "Developement"
 };
 
+const currancy = {
+  USD: { flag: "USD 🇺🇸", rate: 1, syb: "$" },
+  AED: { flag: "AED 🇦🇪", rate: 3.76, syb: "AED" },
+  OMR: { flag: "OMR 🇴🇲", rate: 0.3, syb: "OMR" }
+};
+
+const culist = ["USD", "AED", "OMR"];
+
 export default function CostEstimatorBlock({ block }) {
   const [values, setValues] = useState([]);
   const [cost, setCost] = useState(2);
   const [name, setName] = useState();
   const [number, setNumber] = useState();
   const router = useRouter();
-
+  const [currentCurrancy, setCurrentCurrancy] = useState("OMR");
+  const [culistDisplay, setCulistDisplay] = useState(false);
   const componentRef = useRef();
 
   useEffect(() => {
@@ -241,9 +251,41 @@ export default function CostEstimatorBlock({ block }) {
                     )}
                   </div>
                 ))}
-              <div className="costRange">
-                {cost}$ - {Math.round(cost + 0.2 * cost)}$
+              <div className="currancyCnt">
+                <div
+                  className="currancy"
+                  onClick={() => setCulistDisplay((display) => !display)}
+                >
+                  <div className="down">
+                    <IoIosArrowDown />
+                  </div>
+                  {currancy[currentCurrancy].flag}
+                </div>
+                <div className="culist">
+                  {culist.map((cu) => (
+                    <div
+                      key={cu}
+                      onClick={() => {
+                        setCurrentCurrancy(cu);
+                        setCulistDisplay(false);
+                      }}
+                    >
+                      {currancy[cu].flag}
+                    </div>
+                  ))}
+                </div>
               </div>
+              <div className="costRange">
+                {Math.round(cost * currancy[currentCurrancy].rate)}
+                <span className="syb">
+                  {currancy[currentCurrancy].syb}
+                </span> -{" "}
+                {Math.round(
+                  (cost + 0.2 * cost) * currancy[currentCurrancy].rate
+                )}
+                <span className="syb">{currancy[currentCurrancy].syb}</span>
+              </div>
+              <div className="line"></div>
               <div className="inputCnt">
                 <input
                   className="input"
@@ -370,6 +412,49 @@ export default function CostEstimatorBlock({ block }) {
           font-size: 1.6rem;
           color: ${styles.primaryColor};
           padding: 0.6rem;
+          padding-bottom: 1.6rem;
+        }
+        .currancyCnt {
+          position: relative;
+        }
+        .currancy {
+          padding: 0.2rem 1rem;
+          direction: rtl;
+          cursor: pointer;
+          ${styles.flex};
+          ${styles.flexAligncenter}
+          gap:.2rem
+        }
+        .culist {
+          border: 1px solid gray;
+          padding: 0.2rem;
+          background: white;
+          z-index: 2;
+          position: absolute;
+          right: 1.4rem;
+          padding: 0.4rem;
+          border-radius: 0.4rem;
+          cursor: pointer;
+          display: ${culistDisplay ? "block" : "none"};
+        }
+        .down {
+          padding-top: 0.4rem;
+        }
+        .syb {
+          font-size: 70%;
+          padding-left: 0.2rem;
+        }
+        .line {
+          height: 0.2rem;
+          background: ${styles.borderGradient};
+          border-radius: 50%;
+          position: relative;
+        }
+        .line:before {
+          content: "Info";
+          position: absolute;
+          top: -1.2rem;
+          color: ${styles.primaryColor};
         }
         .inputCnt {
           ${styles.flex};
