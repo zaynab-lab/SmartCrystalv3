@@ -23,17 +23,17 @@ const items = [
     title: "Post Design",
     icon: <MdDesignServices />,
     max: 100,
-    value: 7,
+    value: 5,
     block: ["design", "marketing"],
-    rate: { "8": 28, "12": 24, "30": 20, "101": 15 }
+    rate: { "8": 22, "12": 18, "30": 16, "101": 14 }
   },
   {
     title: "Animated Story",
     icon: <MdOutlineAnimation />,
     max: 40,
-    value: 1,
+    value: 0,
     block: ["design", "marketing"],
-    rate: { "8": 50, "12": 45, "60": 40 }
+    rate: { "8": 40, "12": 35, "60": 30 }
   },
   {
     title: "Website Page",
@@ -41,13 +41,13 @@ const items = [
     max: 20,
     value: 0,
     block: ["design"],
-    rate: { "8": 120, "12": 110, "30": 100 }
+    rate: { "8": 100, "12": 90, "30": 80 }
   },
   {
     title: "Photography",
     icon: <MdCamera />,
     max: 60,
-    value: 2,
+    value: 1,
     block: ["montage"],
     rate: { "5": 36, "11": 26, "20": 18, "60": 15 }
   },
@@ -72,9 +72,9 @@ const items = [
     title: "Landing Page",
     icon: <CgWebsite />,
     max: 8,
-    value: 1,
+    value: 0,
     block: ["marketing"],
-    rate: { "1": 240, "4": 220, "9": 200 }
+    rate: { "1": 220, "4": 200, "9": 180 }
   },
   {
     title: "SM Manag. /month",
@@ -82,7 +82,7 @@ const items = [
     max: 12,
     value: 0,
     block: ["marketing"],
-    rate: { "1": 360, "4": 280, "13": 220 }
+    rate: { "1": 300, "4": 260, "13": 220 }
   },
 
   {
@@ -91,13 +91,13 @@ const items = [
     max: 100,
     value: 1,
     block: ["montage"],
-    rate: { "5": 40, "15": 30, "30": 20, "101": 10 }
+    rate: { "5": 35, "15": 25, "30": 18, "101": 14 }
   },
   {
     title: "WebApp Page",
     icon: <CgWebsite />,
     max: 30,
-    value: 2,
+    value: 1,
     block: ["development"],
     rate: { "8": 220, "12": 240, "20": 260, "31": 280 }
   },
@@ -105,7 +105,7 @@ const items = [
     title: "UX/UI",
     icon: <MdDesignServices />,
     max: 30,
-    value: 2,
+    value: 1,
     block: ["development"],
     rate: { "8": 120, "12": 110, "31": 100 }
   },
@@ -474,15 +474,18 @@ export default function CostEstimatorBlock({ block }) {
         }
 
         .orderbtn {
-          background: ${styles.primaryColor};
+          background: ${name && number ? styles.primaryColor : "#999"};
           padding: 0.6rem 2rem;
           color: white;
           border-radius: 0.5rem;
           text-align: center;
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
           width: fit-content;
           margin: auto;
-          cursor: pointer;
+          cursor: ${name && number && "pointer"};
           font-weight: bold;
+          white-space: nowrap;
         }
       `}</style>
     </>
