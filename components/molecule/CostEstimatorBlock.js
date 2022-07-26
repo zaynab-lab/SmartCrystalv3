@@ -41,7 +41,7 @@ const items = [
     max: 20,
     value: 0,
     block: ["design"],
-    rate: { "8": 100, "12": 90, "30": 80 }
+    rate: { "8": 200, "12": 220, "30": 240 }
   },
   {
     title: "Photography",
