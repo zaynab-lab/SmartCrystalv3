@@ -8,13 +8,13 @@ const team = [
   {
     name: "Zuhair Al Khalsan",
     role: "Founder",
-    mail: "",
-    phone: "+971 5510 22 100"
+    mail: "scrystalit@gmail.com"
+    // phone: "+971 5510 22 100"
   },
   {
     name: "Abdallah Mobarak",
     role: "Co-Founder & CEO",
-    mail: "",
+    mail: "abdallah.moubarak92@gmail.com",
     phone: "+961 7009 75 33"
   }
 ];

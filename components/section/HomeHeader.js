@@ -12,14 +12,14 @@ export default function HomeHeader() {
     <>
       <div className="homeHeaderContainer">
         <div className="homeHeaderContent">
-          <div className="heighlight">
+          {/* <div className="heighlight">
             <div className="logoSymbol">
               <DarkModeLogo />
             </div>
             <div className="smelogo">
               <SMELogo />
             </div>
-          </div>
+          </div> */}
           <div className="secretContainer">
             <div className="secret">
               <Secret />
